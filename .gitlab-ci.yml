@@ -1,3 +1,7 @@
+default:
+  tags:
+    - linux/amd64
+
 image: python:3.8-buster
 
 before_script:
