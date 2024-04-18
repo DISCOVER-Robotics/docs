@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 ---
-# 软件环境配置
+## 软件环境配置
 
 > * 系统要求：Ubuntu20.04LTS
 >
@@ -13,7 +13,7 @@ sidebar: auto
 >
 >   * Token (read only): glpat-YNYiRPBQHx395LANh8vJ
 
-## 基本环境配置
+### 基本环境配置
 
 * 安装git:
 
@@ -29,11 +29,11 @@ chmod u+x Miniconda3-py38_4.9.2-Linux-x86_64.sh
 ./Miniconda3-py38_4.9.2-Linux-x86_64.sh
 ```
 
-## 数据采集环境
+### 数据采集环境
 
 > 可以通过deb包或源码编译两种方式进行arm-control软件安装。若都安装，则将以最后一次安装的为准（请先完成[基本环节配置](https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#PYxldPISIoZtF3xAUo9cUj59nTg)）。
 
-### Deb包安装
+#### Deb包安装
 
 > 注意事项：
 >
@@ -50,9 +50,9 @@ sudo apt update
 sudo rm -rf /usr/local/include/airbot && sudo apt install ./airbot_play_2.6.2-44eac082_amd64.deb
 ```
 
-### 源码安装
+#### 源码安装
 
-#### 依赖配置
+##### 依赖配置
 
 安装依赖（curses、spdlog、fmt）：
 
@@ -63,7 +63,7 @@ cd fmt && mkdir build && cd build
 cmake .. && make -j32 && sudo make install
 ```
 
-#### 下载源码
+##### 下载源码
 
 ```python
 git clone --depth 1 https://git.qiuzhi.tech:20000/airbot-play/control/arm-control.git -b develop_ghz
@@ -71,13 +71,13 @@ git clone --depth 1 https://git.qiuzhi.tech:20000/airbot-play/control/arm-contro
 
 修改.gitmodules中的https://git.qiuzhi.tech/airbot-play/arm-models为：https://git.qiuzhi.tech:20000/airbot-play/arm-models，然后开启梯子执行如下命令（若arm-models无法clone，则关闭梯子后再执行一次该命令）：
 
-#### 编译安装
+##### 编译安装
 
-## 数据转换环境
+### 数据转换环境
 
 > 需先配置[数据采集环境](https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#MXnldmMNUoLeVJxS50lcW77Fnid)。
 
-## 数据回放环境
+### 数据回放环境
 
 > * 需先配置[数据转换环境](https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#LlYvdcqgTozwCixv5uIcYk0FnXg)。
 >
@@ -85,29 +85,29 @@ git clone --depth 1 https://git.qiuzhi.tech:20000/airbot-play/control/arm-contro
 
 下载whl文件后，cd到下载路径，安装：
 
-## 模型训练环境
+### 模型训练环境
 
 > 需先配置[数据转换环境](https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#MCnydl3HEoio8hxtZAVch8MfnU5)。
 
-## 模型推理环境
+### 模型推理环境
 
 > 配置[数据回放环境](https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#LlYvdcqgTozwCixv5uIcYk0FnXg)和[模型训练环境](https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#P9ORdO7EGoRTRLxFJllctg8NnDb)即可。
 
-## 测试数据样例
+### 测试数据样例
 
 提供单双臂任务各三组原始数据用于测试环境是否安装正常。
 
-# 机械臂使用说明
+## 机械臂使用说明
 
 > 请先熟悉一下如何使用机械臂。
 >
 > 《用户手册》
 
-## 面板介绍
+### 面板介绍
 
 机械臂面板实物图如下：
 
-![](images/image-1.png)
+![](images/aloha-image-1.png)
 
 * 红框部分是开/关机键，**长按3s左右待指示灯条全部亮起后完成开/关机**。
 
@@ -115,7 +115,7 @@ git clone --depth 1 https://git.qiuzhi.tech:20000/airbot-play/control/arm-contro
 
 * 蓝框部分是通信接口。**注意不要连接到上图中的USB-1口**。
 
-## 开机与标零
+### 开机与标零
 
 > 请先配置[数据采集环境](https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#MXnldmMNUoLeVJxS50lcW77Fnid)。
 
@@ -133,13 +133,13 @@ git clone --depth 1 https://git.qiuzhi.tech:20000/airbot-play/control/arm-contro
 
 * 双臂操作时使用时只需要依次增加can序号完成上述步骤即可。
 
-# 数据采集
+## 数据采集
 
 > * 需先配置[数据采集环境](https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#MXnldmMNUoLeVJxS50lcW77Fnid)。
 >
 > * 任务命名应合理，建议命名中带上时间，用于区分不同时间采集的同一任务数据。
 
-## 启动机械臂
+### 启动机械臂
 
 1. 准备两台带末端夹爪和相机的机械臂，一台机械臂用于示教（人手操作），另一台用于执行。
 
@@ -151,7 +151,7 @@ git clone --depth 1 https://git.qiuzhi.tech:20000/airbot-play/control/arm-contro
 
 5. 确保机械臂在零点，否则需要进行[标零](https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#MV4SdrV2lohdvsxHW9Qc83Phnkg)。
 
-## 连接相机
+### 连接相机
 
 数据采集需要用到3个相机，其连接顺序有要求：
 
@@ -167,7 +167,7 @@ git clone --depth 1 https://git.qiuzhi.tech:20000/airbot-play/control/arm-contro
 
 * 双臂任务连接次序：TODO
 
-## 运行采集程序
+### 运行采集程序
 
 **参数含义说明：**
 
@@ -239,7 +239,7 @@ git clone --depth 1 https://git.qiuzhi.tech:20000/airbot-play/control/arm-contro
 
 3. 将采集到的任务数据\<task\_name>文件夹存储到**指定硬盘**中的ALOHA/demonstrations/raw文件夹中备份。
 
-# 数据转换
+## 数据转换
 
 > 需先配置[数据转换环境](https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#MCnydl3HEoio8hxtZAVch8MfnU5)。
 
@@ -263,7 +263,7 @@ git clone --depth 1 https://git.qiuzhi.tech:20000/airbot-play/control/arm-contro
 
 最后记得将采集到的任务数据\<task\_name>文件夹存储到**指定硬盘**中的ALOHA/demonstrations/hdf5文件夹中备份。
 
-# 数据回放（可选）
+## 数据回放（可选）
 
 > 通过数据回放的效果可以验证采集的数据、机械臂的零点设置等是否有问题（需先配置[数据回放环境](https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#LlYvdcqgTozwCixv5uIcYk0FnXg)）。
 
@@ -281,11 +281,11 @@ git clone --depth 1 https://git.qiuzhi.tech:20000/airbot-play/control/arm-contro
 
 * -ia：不回放动作数据
 
-# 参数配置
+## 参数配置
 
 **模型训练、推理前**需要先进行参数配置。在act/task\_configs文件中**创建一个与任务名相同的Python文件（不是在example\_task.文件中修改）**对任务进行配置，主要包括**修改各种路径**（通过replace\_task\_name使用**默认路径**或手动指定路径替换）、相机名称（camera\_names）和机器人数量（robot\_num，**双臂任务设置为2**）等等。以下是example\_task.py中的示例，其演示了如何基于template.py中的默认配置进行修改，而不需要全部重写（全部可调整配置详见act/task\_configs/template.py）：
 
-![](images/image-2.png)
+![](images/aloha-image-2.png)
 
 使用**默认路径训练**时，需要将转换得到的hdf5格式的数据放于`act/data/hdf5/<task_name>`文件夹中，可执行如下命令创建目录：
 
@@ -293,7 +293,7 @@ git clone --depth 1 https://git.qiuzhi.tech:20000/airbot-play/control/arm-contro
 
 > * CKPT\_DIR和STATS\_PATH若不存在将会**自动创建并写入**相关文件。
 
-# 模型训练
+## 模型训练
 
 > 请先完成[模型训练环境配置](https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#P9ORdO7EGoRTRLxFJllctg8NnDb)和[参数配置](https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#KchBdojIIo18u4xG7nicTym2nAf)（Please use at least 2 collected data to train）。
 
@@ -301,7 +301,7 @@ git clone --depth 1 https://git.qiuzhi.tech:20000/airbot-play/control/arm-contro
 
 训练结束后，默认可以在./my\_ckpt/\<task\_name>目录下看到**两个文件夹**，其中ckpt中存储了中间过程的权重文件（称为**过程文件夹**）；而与\<task\_name>同名的文件夹（称为**核心文件夹**）下存储了最后权重、最优权重、统计数据、训练关键信息（包含初始关节角、训练参数配置等）以及训练过程的loss曲线图等文件：
 
-![](images/image.png)
+![](images/aloha-image.png)
 
 为了方便后续使用，将**核心文件夹**存储到**指定硬盘**中的ALOHA/my\_ckpt文件夹中。
 
@@ -333,11 +333,11 @@ git clone --depth 1 https://git.qiuzhi.tech:20000/airbot-play/control/arm-contro
 >
 > \- If inference is too slow -> robot moving slowly: disable temporal\_agg and increase query frequency [here](https://github.com/tonyzhaozh/act/blob/main/imitate_episodes.py#L193). We tried as high as 20.
 
-# 模型使用
+## 模型使用
 
 > 请先完成[模型推理环境配置](https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#JW3XdhzIQojkoSxb31MclroFnPh)和[参数配置](https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#KchBdojIIo18u4xG7nicTym2nAf)。
 
-## 环境准备
+### 环境准备
 
 * 首先将示教臂和执行臂的USB接口都拔掉以刷新CAN接口，然后只连接执行臂的USB接口（这样执行臂将使用CAN0）。
 
@@ -345,7 +345,7 @@ git clone --depth 1 https://git.qiuzhi.tech:20000/airbot-play/control/arm-contro
 
 * 长按开启机械臂电源开关。
 
-## 执行命令
+### 执行命令
 
 先进入act文件夹中并激活conda环境：
 
@@ -363,7 +363,7 @@ git clone --depth 1 https://git.qiuzhi.tech:20000/airbot-play/control/arm-contro
 
 每次评估结束后，将在eval\_results文件夹中看到该任务的评估结果相关文件（包含过程视频）。
 
-# 信息查看
+## 信息查看
 
 模型训练后在key\_info.pkl文件中存储了训练时的关键数据，可以通过如下方式查看。
 
@@ -373,7 +373,7 @@ git clone --depth 1 https://git.qiuzhi.tech:20000/airbot-play/control/arm-contro
 
 将在终端看到与该任务相关的信息输出，例如：
 
-![](images/image-3.png)
+![](images/aloha-image-3.png)
 
 其中包括了训练时的全部配置、训练数据的初始关节角等信息。通过这些信息，我们可以确定如下关键信息：
 
