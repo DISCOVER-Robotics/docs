@@ -41,5 +41,5 @@ jobs:
           git add .
           git checkout -b gh-pages
           git commit -m "Deploy"
-          git remote add origin https://github.com/DISCOVER-Robotics/docs.git
+          git remote add origin https://${{ secrets.GH_PAT }}@github.com/DISCOVER-Robotics/docs.git
           git push --force --set-upstream origin gh-pages
