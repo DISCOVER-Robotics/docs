@@ -66,3 +66,8 @@ markdown_extensions:
   - pymdownx.superfences
   - admonition
   - pymdownx.details
+nav:
+  - Welcome: README.md
+  - Software SDK:
+    - C++ Interface: "https://discover-robotics.github.io/docs/cpp/"
+    - ROS1 Interface: sdk/ROS1.md
