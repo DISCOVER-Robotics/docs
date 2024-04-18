@@ -32,6 +32,12 @@ theme:
     - navigation.footer
     - navigation.instant
     - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - toc.follow
     - search.suggest
     - search.highlight
     - content.code.copy

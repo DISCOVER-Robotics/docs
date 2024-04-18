@@ -26,12 +26,13 @@ jobs:
             mkdocs-material-
       - run: pip install -r requirements.txt
       - run: pip install thirdparty/mkdocs-enumerate-headings-plugin
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GH_PAT }}
+          publish_dir: ./public
       - uses: mattnotmitt/doxygen-action@v1.9.5
         with:
             working-directory: 'thirdparty/arm-control'
             # enable-latex: true
       - run: mkdir -p public && cp -r thirdparty/arm-control/doc/html public/cpp
-      - uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GH_PAT }}
-          publish_dir: ./public
+      - run: cd public && git init && git add . && git commit -m "Deploy" && git push --force "
