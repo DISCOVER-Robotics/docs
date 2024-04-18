@@ -1,3 +1,9 @@
 [submodule "thirdparty/mkdocs-enumerate-headings-plugin"]
 	path = thirdparty/mkdocs-enumerate-headings-plugin
 	url = https://github.com/TimChaubet-I4U/mkdocs-enumerate-headings-plugin.git
+[submodule "thirdparty/arm-control"]
+	path = thirdparty/arm-control
+	url = https://github.com/DISCOVER-Robotics/arm-control
+[submodule "thirdparty/mkdocs-doxygen-plugin"]
+	path = thirdparty/mkdocs-doxygen-plugin
+	url = https://github.com/pieterdavid/mkdocs-doxygen-plugin

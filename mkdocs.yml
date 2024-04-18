@@ -41,6 +41,12 @@ plugins:
   - enumerate-headings:
       increment_across_pages: false
       exclude_h1: true
+  - doxygen:
+      recursive: yes
+      packages:
+        - cpp:
+            url: thirdparty/arm-control
+            
 extra:
   alternate:
     - name: English
