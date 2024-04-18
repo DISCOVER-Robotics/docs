@@ -46,7 +46,6 @@ plugins:
       packages:
         - cpp:
             url: thirdparty/arm-control
-            
 extra:
   alternate:
     - name: English
