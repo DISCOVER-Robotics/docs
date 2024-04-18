@@ -32,4 +32,4 @@ jobs:
             working-directory: 'thirdparty/arm-control'
             # enable-latex: true
       - run: mkdir -p public && cp -r thirdparty/arm-control/doc/html public/cpp
-      - run: cd public && git init && git add . && git commit -m "Deploy" && git push --force "
+      - run: cd public && git init && git add . && git commit -m "Deploy" && git push --force
