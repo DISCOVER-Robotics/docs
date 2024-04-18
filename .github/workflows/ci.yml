@@ -30,5 +30,6 @@ jobs:
         with:
             working-directory: 'thirdparty/arm-control'
             enable-latex: true
-      - run: mv submodule/arm-control/doc/html public/cpp
+      - run: mv thirdparty/arm-control/doc/html public/cpp
+      - uses: actions/checkout@v4
       - run: mkdocs gh-deploy --force
