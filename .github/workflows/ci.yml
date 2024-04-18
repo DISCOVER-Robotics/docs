@@ -35,4 +35,11 @@ jobs:
       - run: |
           git config --global user.name github-actions[bot]
           git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
-      - run: cd public && git init && git add . && git commit -m "Deploy" && git push --force
+      - run: |
+          cd public
+          git init
+          git add .
+          git checkout -b gh-pages
+          git commit -m "Deploy"
+          git remote add origin https://github.com/DISCOVER-Robotics/docs.git
+          git push --force 
