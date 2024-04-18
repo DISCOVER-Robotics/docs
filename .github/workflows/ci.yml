@@ -31,5 +31,7 @@ jobs:
             working-directory: 'thirdparty/arm-control'
             # enable-latex: true
       - run: mkdir -p public && cp -r thirdparty/arm-control/doc/html public/cpp
-      - uses: actions/checkout@v4
+      - run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
       - run: mkdocs gh-deploy --force
