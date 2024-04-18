@@ -1,0 +1,3 @@
+[submodule "thirdparty/mkdocs-enumerate-headings-plugin"]
+	path = thirdparty/mkdocs-enumerate-headings-plugin
+	url = https://github.com/TimChaubet-I4U/mkdocs-enumerate-headings-plugin.git
