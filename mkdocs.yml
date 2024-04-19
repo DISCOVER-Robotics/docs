@@ -72,11 +72,11 @@ nav:
     - sdk/intro.md
     - C++ Interface: "https://discover-robotics.github.io/docs/cpp/"
     - ROS1 Interface: sdk/ROS1.md
+    - Python Interface: Airbot-Play-Python-API/index.html
   - Applications:
     - applications/intro.md
     - ALOHA: applications/aloha.md
-  - AIRBOTPlay:
-    - BasicOperatingInstructions: AIRBOT-Play/AIRBOT-Play-Basic-Operating-Instructions.md
-    - AIRBOT-Play-Gazebo: AIRBOT-Play/AIRBOT-Play-Gazebo.md
-    - AIRBOT-Play-IL: AIRBOT-Play/AIRBOT-Play-IL.md
-    - Airbot-Play-Python-API : Airbot-Play-Python-API/index.html
+    - Basic Operating Instructions: AIRBOT-Play/AIRBOT-Play-Basic-Operating-Instructions.md
+    - Building Block -Gazebo: AIRBOT-Play/AIRBOT-Play-Gazebo.md
+    - Building Block -IL: AIRBOT-Play/AIRBOT-Play-IL.md
+
