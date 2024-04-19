@@ -72,7 +72,6 @@ nav:
     - sdk/intro.md
     - C++ Interface: "https://discover-robotics.github.io/docs/cpp/"
     - ROS1 Interface: sdk/ROS1.md
-    - ROS Interface simple: sdk/ROS-interface-Simple.md
   - Applications:
     - applications/intro.md
     - ALOHA: applications/aloha.md
