@@ -1,4 +1,4 @@
-site_name: AIRBOT Play 产品文档
+site_name: AIRBOT 产品文档
 site_url: https://discover-robotics.github.io/docs
 site_dir: public
 theme:
@@ -67,12 +67,12 @@ markdown_extensions:
   - admonition
   - pymdownx.details
 nav:
-  - Welcome: index.md
+  - User Manual: manual/index.md
   - Software SDK: 
     - sdk/intro.md
     - C++ Interface: "https://discover-robotics.github.io/docs/cpp/"
     - ROS1 Interface: sdk/ROS1.md
-    - Python Interface: Airbot-Play-Python-API/index.html
+    # - Python Interface: Airbot-Play-Python-API/index.html
   - Applications:
     - applications/intro.md
     - ALOHA: applications/aloha.md
