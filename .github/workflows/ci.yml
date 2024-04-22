@@ -35,12 +35,10 @@ jobs:
         # python interface docs generate
       - run: sudo apt install -y ./.github/workflows/airbot_play_2.7.1_amd64.deb
       - run: sudo apt install -y can-utils cmake libeigen3-dev libcppunit-dev liburdfdom-dev libtinyxml2-dev libkdl-parser-dev libboost-serialization-dev libboost-thread-dev build-essential libncurses5-dev libspdlog-dev
-      - run: cd thirdparty/python-interface-docs && pip install -r requirements.txt && cd ..
-      - run: cd thirdparty/sdk && git submodule update --init --recursive && cd python
-      - run: python -m pybind11_mkdoc -o src/doc.hpp -I/usr/include/eigen3 -std=c++17 /usr/include/airbot/command/command_base.hpp /usr/include/airbot/modules/motors/motor_driver.hpp
-      - run: pip install -e . && cd ../..
-      - run: cd python-interface-docs && make html && cd ../..
-      - run: mkdir public/python && cp -r thirdparty/python-interface-docs/build/html public/python
+      - run: cd thirdparty/python-interface-docs && pip install -r requirements.txt
+      - run: cd thirdparty/sdk && git submodule update --init --recursive && cd python && python -m pybind11_mkdoc -o src/doc.hpp -I/usr/include/eigen3 -std=c++17 /usr/include/airbot/command/command_base.hpp /usr/include/airbot/modules/motors/motor_driver.hpp && pip install -e .
+      - run: cd thirdparty/python-interface-docs && make html
+      - run: cp -r thirdparty/python-interface-docs/build/html public/python
       - run: |
           git config --global user.name github-actions[bot]
           git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
