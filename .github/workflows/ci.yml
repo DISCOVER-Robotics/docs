@@ -32,6 +32,15 @@ jobs:
             working-directory: 'thirdparty/arm-control'
             # enable-latex: true
       - run: mkdir -p public && cp -r thirdparty/arm-control/doc/html public/cpp
+        # python interface docs generate
+      - run: cd .github && ./getLastestDeb && apt install -y ./*.deb && cd ..
+      - run: apt install -y can-utils cmake libeigen3-dev libcppunit-dev liburdfdom-dev libtinyxml2-dev libkdl-parser-dev libboost-serialization-dev libboost-thread-dev build-essential libncurses5-dev libspdlog-dev
+      - run: cd thirdparty/python-interface-docs && pip install -r requirements.txt && cd ..
+      - run: cd thirdparty/sdk && git submodule update --init --recursive
+      - run: cd python && python -m pybind11_mkdoc -o src/doc.hpp -I/usr/include/eigen3 -std=c++17 /usr/include/airbot/command/command_base.hpp /usr/include/airbot/modules/motors/motor_driver.hpp
+      - run: pip install -e . && cd ../..
+      - run: cd python-interface-docs && make html
+      - run: cp -r build/html ../../public/python
       - run: |
           git config --global user.name github-actions[bot]
           git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
