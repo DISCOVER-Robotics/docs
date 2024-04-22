@@ -4,3 +4,6 @@
 [submodule "thirdparty/arm-control"]
 	path = thirdparty/arm-control
 	url = git@github.com:DISCOVER-Robotics/arm-control.git
+[submodule "thirdparty/sdk"]
+	path = thirdparty/sdk
+	url = https://github.com/DISCOVER-Robotics/sdk
