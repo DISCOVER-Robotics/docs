@@ -33,9 +33,7 @@ jobs:
             # enable-latex: true
       - run: mkdir -p public && cp -r thirdparty/arm-control/doc/html public/cpp
         # python interface docs generate
-      - run: saved_http_proxy="$http_proxy" && saved_https_proxy="$https_proxy" && unset http_proxy https_proxy
-      - run: wget https://git.qiuzhi.tech:20000/api/v4/projects/18/packages/generic/arm-control/v2.7.1/airbot_play_2.7.1_amd64.deb && apt install -y ./*.deb
-      - run: export http_proxy="$saved_http_proxy" && export https_proxy="$saved_https_proxy"
+      - run: apt install -y ./.github/workflows/airbot_play_2.7.1_amd64.deb
       - run: apt install -y can-utils cmake libeigen3-dev libcppunit-dev liburdfdom-dev libtinyxml2-dev libkdl-parser-dev libboost-serialization-dev libboost-thread-dev build-essential libncurses5-dev libspdlog-dev
       - run: cd thirdparty/python-interface-docs && pip install -r requirements.txt && cd ..
       - run: cd thirdparty/sdk && git submodule update --init --recursive
