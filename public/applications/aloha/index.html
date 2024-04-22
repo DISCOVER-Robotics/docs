@@ -1,0 +1,1233 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://discover-robotics.github.io/docs/0.2/applications/aloha/" rel="canonical"/>
+<link href="../intro/" rel="prev"/>
+<link href="../../AIRBOT-Play/AIRBOT-Play-Basic-Operating-Instructions/" rel="next"/>
+<link href="../../assets/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.5.18" name="generator"/>
+<title>ALOHA - AIRBOT 产品文档</title>
+<link href="../../assets/stylesheets/main.66ac8b77.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CSpace+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Lato";--md-code-font:"Space Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="cyan" data-md-color-primary="black" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="AIRBOT 产品文档" class="md-header__button md-logo" data-md-component="logo" href="https://airbots.online" title="AIRBOT 产品文档">
+<img alt="logo" src="../../assets/logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            AIRBOT 产品文档
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              ALOHA
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="black" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Select language" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="/docs" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="/docs/zh/" hreflang="zh">
+              Chinese
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../manual/">
+        
+  
+    
+  
+  User Manual
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../sdk/intro/">
+          
+  
+  Software SDK
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../intro/">
+          
+  
+  Applications
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="AIRBOT 产品文档" class="md-nav__button md-logo" data-md-component="logo" href="https://airbots.online" title="AIRBOT 产品文档">
+<img alt="logo" src="../../assets/logo.png"/>
+</a>
+    AIRBOT 产品文档
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../manual/">
+<span class="md-ellipsis">
+    User Manual
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Software SDK
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Software SDK
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sdk/intro/">
+<span class="md-ellipsis">
+    Intro
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://discover-robotics.github.io/docs/cpp/">
+<span class="md-ellipsis">
+    C++ Interface
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sdk/ROS1/">
+<span class="md-ellipsis">
+    ROS1 Interface
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<span class="md-ellipsis">
+    Applications
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Applications
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../intro/">
+<span class="md-ellipsis">
+    Intro
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    ALOHA
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    ALOHA
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      软件环境配置
+    </span>
+</a>
+<nav aria-label="软件环境配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      基本环境配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      数据采集环境
+    </span>
+</a>
+<nav aria-label="数据采集环境" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deb">
+<span class="md-ellipsis">
+      Deb包安装
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      源码安装
+    </span>
+</a>
+<nav aria-label="源码安装" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      依赖配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      下载源码
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
+      编译安装
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+<span class="md-ellipsis">
+      数据转换环境
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+<span class="md-ellipsis">
+      数据回放环境
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+<span class="md-ellipsis">
+      模型训练环境
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+<span class="md-ellipsis">
+      模型推理环境
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+<span class="md-ellipsis">
+      测试数据样例
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+<span class="md-ellipsis">
+      机械臂使用说明
+    </span>
+</a>
+<nav aria-label="机械臂使用说明" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+<span class="md-ellipsis">
+      面板介绍
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+<span class="md-ellipsis">
+      开机与标零
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+<span class="md-ellipsis">
+      数据采集
+    </span>
+</a>
+<nav aria-label="数据采集" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+<span class="md-ellipsis">
+      启动机械臂
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+<span class="md-ellipsis">
+      连接相机
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+<span class="md-ellipsis">
+      运行采集程序
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_20">
+<span class="md-ellipsis">
+      数据转换
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_21">
+<span class="md-ellipsis">
+      数据回放（可选）
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_22">
+<span class="md-ellipsis">
+      参数配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_23">
+<span class="md-ellipsis">
+      模型训练
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_24">
+<span class="md-ellipsis">
+      模型使用
+    </span>
+</a>
+<nav aria-label="模型使用" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_25">
+<span class="md-ellipsis">
+      环境准备
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_26">
+<span class="md-ellipsis">
+      执行命令
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_27">
+<span class="md-ellipsis">
+      信息查看
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AIRBOT-Play/AIRBOT-Play-Basic-Operating-Instructions/">
+<span class="md-ellipsis">
+    Basic Operating Instructions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AIRBOT-Play/AIRBOT-Play-Gazebo/">
+<span class="md-ellipsis">
+    Building Block -Gazebo
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AIRBOT-Play/AIRBOT-Play-IL/">
+<span class="md-ellipsis">
+    Building Block -IL
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      软件环境配置
+    </span>
+</a>
+<nav aria-label="软件环境配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      基本环境配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      数据采集环境
+    </span>
+</a>
+<nav aria-label="数据采集环境" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deb">
+<span class="md-ellipsis">
+      Deb包安装
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      源码安装
+    </span>
+</a>
+<nav aria-label="源码安装" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      依赖配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      下载源码
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
+      编译安装
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+<span class="md-ellipsis">
+      数据转换环境
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+<span class="md-ellipsis">
+      数据回放环境
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+<span class="md-ellipsis">
+      模型训练环境
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+<span class="md-ellipsis">
+      模型推理环境
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+<span class="md-ellipsis">
+      测试数据样例
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+<span class="md-ellipsis">
+      机械臂使用说明
+    </span>
+</a>
+<nav aria-label="机械臂使用说明" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+<span class="md-ellipsis">
+      面板介绍
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+<span class="md-ellipsis">
+      开机与标零
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+<span class="md-ellipsis">
+      数据采集
+    </span>
+</a>
+<nav aria-label="数据采集" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+<span class="md-ellipsis">
+      启动机械臂
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+<span class="md-ellipsis">
+      连接相机
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+<span class="md-ellipsis">
+      运行采集程序
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_20">
+<span class="md-ellipsis">
+      数据转换
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_21">
+<span class="md-ellipsis">
+      数据回放（可选）
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_22">
+<span class="md-ellipsis">
+      参数配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_23">
+<span class="md-ellipsis">
+      模型训练
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_24">
+<span class="md-ellipsis">
+      模型使用
+    </span>
+</a>
+<nav aria-label="模型使用" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_25">
+<span class="md-ellipsis">
+      环境准备
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_26">
+<span class="md-ellipsis">
+      执行命令
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_27">
+<span class="md-ellipsis">
+      信息查看
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> ALOHA</h1>
+<h2 id="_1"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> 软件环境配置</h2>
+<blockquote>
+<ul>
+<li>
+<p>系统要求：Ubuntu20.04LTS</p>
+</li>
+<li>
+<p>根据实际需求配置相应的环境（如进行数据采集只需配置数据采集环境即可）。</p>
+</li>
+<li>
+<p>仓库clone权限（后续可能会用到）：</p>
+</li>
+<li>
+<p>User name: OpenGHz </p>
+</li>
+<li>
+<p>Token (read only): glpat-YNYiRPBQHx395LANh8vJ</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="_2"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.1</span> 基本环境配置</h3>
+<ul>
+<li>安装git:</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>-y
+</span></code></pre></div>
+<ul>
+<li>下载安装miniconda py38的最后一版:</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>wget<span class="w"> </span>https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-py38_4.9.2-Linux-x86_64.sh
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>chmod<span class="w"> </span>u+x<span class="w"> </span>Miniconda3-py38_4.9.2-Linux-x86_64.sh
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>./Miniconda3-py38_4.9.2-Linux-x86_64.sh
+</span></code></pre></div>
+<h3 id="_3"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2</span> 数据采集环境</h3>
+<blockquote>
+<p>可以通过deb包或源码编译两种方式进行arm-control软件安装。若都安装，则将以最后一次安装的为准（请先完成<a href="https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#PYxldPISIoZtF3xAUo9cUj59nTg">基本环节配置</a>）。</p>
+</blockquote>
+<h4 id="deb"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2.1</span> Deb包安装</h4>
+<blockquote>
+<p>注意事项：</p>
+<ul>
+<li>
+<p>Deb包仅能支持数据采集，如果有其他使用需求，请使用<a href="https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#Z66sdAB0hotbwQx8YqfcsHhWnnc">源码安装</a>。</p>
+</li>
+<li>
+<p>若系统中有通过源码安装过旧版本的arm-control，可能会引起冲突，建议继续用<a href="https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#Z66sdAB0hotbwQx8YqfcsHhWnnc">源码安装</a>。</p>
+</li>
+</ul>
+</blockquote>
+<p>下载最新Deb包： #TODO: 等待测试后合并到develop分支然后直接下载develop即可。</p>
+<p>下载完成后终端进入下载目录，然后进行安装：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">sudo</span> <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">airbot</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">./</span><span class="n">airbot_play_2</span><span class="mf">.6.2</span><span class="o">-</span><span class="mi">44</span><span class="n">eac082_amd64</span><span class="o">.</span><span class="n">deb</span>
+</span></code></pre></div>
+<h4 id="_4"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2.2</span> 源码安装</h4>
+<h5 id="_5"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2.2.1</span> 依赖配置</h5>
+<p>安装依赖（curses、spdlog、fmt）：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libncurses5</span><span class="o">-</span><span class="n">dev</span> <span class="n">libspdlog</span><span class="o">-</span><span class="n">dev</span> <span class="o">-</span><span class="n">y</span>
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span> <span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">fmtlib</span><span class="o">/</span><span class="n">fmt</span><span class="o">.</span><span class="n">git</span>
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">cd</span> <span class="n">fmt</span> <span class="o">&amp;&amp;</span> <span class="n">mkdir</span> <span class="n">build</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="n">build</span>
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">cmake</span> <span class="o">..</span> <span class="o">&amp;&amp;</span> <span class="n">make</span> <span class="o">-</span><span class="n">j32</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+</span></code></pre></div>
+<h5 id="_6"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2.2.2</span> 下载源码</h5>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span> <span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">git</span><span class="o">.</span><span class="n">qiuzhi</span><span class="o">.</span><span class="n">tech</span><span class="p">:</span><span class="mi">20000</span><span class="o">/</span><span class="n">airbot</span><span class="o">-</span><span class="n">play</span><span class="o">/</span><span class="n">control</span><span class="o">/</span><span class="n">arm</span><span class="o">-</span><span class="n">control</span><span class="o">.</span><span class="n">git</span> <span class="o">-</span><span class="n">b</span> <span class="n">develop_ghz</span>
+</span></code></pre></div>
+<p>修改.gitmodules中的https://git.qiuzhi.tech/airbot-play/arm-models为：https://git.qiuzhi.tech:20000/airbot-play/arm-models，然后开启梯子执行如下命令（若arm-models无法clone，则关闭梯子后再执行一次该命令）：</p>
+<h5 id="_7"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2.2.3</span> 编译安装</h5>
+<h3 id="_8"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.3</span> 数据转换环境</h3>
+<blockquote>
+<p>需先配置<a href="https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#MXnldmMNUoLeVJxS50lcW77Fnid">数据采集环境</a>。</p>
+</blockquote>
+<h3 id="_9"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.4</span> 数据回放环境</h3>
+<blockquote>
+<ul>
+<li>
+<p>需先配置<a href="https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#LlYvdcqgTozwCixv5uIcYk0FnXg">数据转换环境</a>。</p>
+</li>
+<li>
+<p>该步配置也即机械臂Python控制接口配置。</p>
+</li>
+</ul>
+</blockquote>
+<p>下载whl文件后，cd到下载路径，安装：</p>
+<h3 id="_10"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.5</span> 模型训练环境</h3>
+<blockquote>
+<p>需先配置<a href="https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#MCnydl3HEoio8hxtZAVch8MfnU5">数据转换环境</a>。</p>
+</blockquote>
+<h3 id="_11"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.6</span> 模型推理环境</h3>
+<blockquote>
+<p>配置<a href="https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#LlYvdcqgTozwCixv5uIcYk0FnXg">数据回放环境</a>和<a href="https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#P9ORdO7EGoRTRLxFJllctg8NnDb">模型训练环境</a>即可。</p>
+</blockquote>
+<h3 id="_12"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.7</span> 测试数据样例</h3>
+<p>提供单双臂任务各三组原始数据用于测试环境是否安装正常。</p>
+<h2 id="_13"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> 机械臂使用说明</h2>
+<blockquote>
+<p>请先熟悉一下如何使用机械臂。</p>
+<p>《用户手册》</p>
+</blockquote>
+<h3 id="_14"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.1</span> 面板介绍</h3>
+<p>机械臂面板实物图如下：</p>
+<p><img alt="" src="../images/aloha-image-1.png"/></p>
+<ul>
+<li>
+<p>红框部分是开/关机键，<strong>长按3s左右待指示灯条全部亮起后完成开/关机</strong>。</p>
+</li>
+<li>
+<p>绿框部分是电源接口。</p>
+</li>
+<li>
+<p>蓝框部分是通信接口。<strong>注意不要连接到上图中的USB-1口</strong>。</p>
+</li>
+</ul>
+<h3 id="_15"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2</span> 开机与标零</h3>
+<blockquote>
+<p>请先配置<a href="https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#MXnldmMNUoLeVJxS50lcW77Fnid">数据采集环境</a>。</p>
+</blockquote>
+<ul>
+<li>
+<p>通过电源适配器连接机械臂和电源，通过Type-C数据线连接机械臂与电脑（先连接示教臂，即人手操作的臂，再连接执行臂），然后长按开机键开机。</p>
+</li>
+<li>
+<p>观察机械臂是否在零位。若不在零位或不知道是否在零位，请进行标零。可参考如下视频：</p>
+</li>
+</ul>
+<p>具体的标零命令如下（注意执行该命令后机械臂会受重力而下坠，请先扶好机械臂再执行该命令）：</p>
+<ul>
+<li>
+<p>示教臂标零（人手操作的那台臂）：</p>
+</li>
+<li>
+<p>执行臂标零：</p>
+</li>
+<li>
+<p>注意执行标零命令后<strong>手动将机械臂末端夹爪推动至闭合位置</strong>。</p>
+</li>
+<li>
+<p>双臂操作时使用时只需要依次增加can序号完成上述步骤即可。</p>
+</li>
+</ul>
+<h2 id="_16"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3</span> 数据采集</h2>
+<blockquote>
+<ul>
+<li>
+<p>需先配置<a href="https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#MXnldmMNUoLeVJxS50lcW77Fnid">数据采集环境</a>。</p>
+</li>
+<li>
+<p>任务命名应合理，建议命名中带上时间，用于区分不同时间采集的同一任务数据。</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="_17"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.1</span> 启动机械臂</h3>
+<ol>
+<li>
+<p>准备两台带末端夹爪和相机的机械臂，一台机械臂用于示教（人手操作），另一台用于执行。</p>
+</li>
+<li>
+<p>连接两台机械臂的电源（顺序无要求）。</p>
+</li>
+<li>
+<p><strong>先</strong>通过USB连接示教臂（对应can0），<strong>再</strong>通过USB连接执行臂（对应can1）。</p>
+</li>
+<li>
+<p>长按开机。</p>
+</li>
+<li>
+<p>确保机械臂在零点，否则需要进行<a href="https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#MV4SdrV2lohdvsxHW9Qc83Phnkg">标零</a>。</p>
+</li>
+</ol>
+<h3 id="_18"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.2</span> 连接相机</h3>
+<p>数据采集需要用到3个相机，其连接顺序有要求：</p>
+<p>旧版：</p>
+<ul>
+<li>
+<p>单臂任务连接次序：臂上相机 -&gt; 左侧（高侧）环境相机 -&gt; 右侧（低侧）环境相机</p>
+</li>
+<li>
+<p>双臂任务连接次序：左臂相机 -&gt; 右臂相机 -&gt; 左侧（高侧）环境相机 -&gt; 右侧（低侧）环境相机</p>
+</li>
+</ul>
+<p>新版：</p>
+<ul>
+<li>
+<p>单臂任务连接次序：臂上相机左目 -&gt; 臂上相机右目 -&gt; 底座相机</p>
+</li>
+<li>
+<p>双臂任务连接次序：TODO</p>
+</li>
+</ul>
+<h3 id="_19"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.3</span> 运行采集程序</h3>
+<p><strong>参数含义说明：</strong></p>
+<ul>
+<li>
+<p><code>-c</code>：USB相机的设备号，多个设备号的顺序（即相机顺序）由具体任务指定</p>
+</li>
+<li>
+<p>一般按照连接顺序，可用的相机设备号为自增偶数，如<code>0</code>, <code>2</code>, <code>4</code>...</p>
+<ul>
+<li>
+<p>若电脑自带普通摄像头，该摄像头占用一个设备号，外部连接相机设备号为从 <code>2</code> 开始的自增偶数：<code>2</code>, <code>4</code>, <code>6</code> ...</p>
+</li>
+<li>
+<p>若电脑自带带深度 / 结构光摄像头（如 Windows Hello 摄像头），RGB 相机和深度相机各自占用一个设备号，外部连接相机设备号为从 <code>4</code> 开始的自增偶数：<code>4</code>, <code>6</code>, <code>8</code> ...</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>-mts</code>：指定采集的最大帧数；由具体任务指定</p>
+</li>
+<li>
+<p>当达到最大时间步后，程序会进行提示</p>
+</li>
+<li>
+<p><code>-tn</code>：任务名称，由具体任务指定</p>
+</li>
+<li>
+<p>决定了任务将保存到当前目录下的demonstrations/raw的哪个子文件夹里。</p>
+</li>
+<li>
+<p><code>-se</code>：起始采集的episode序号，默认为0</p>
+</li>
+<li>
+<p>程序中断后可以修改该值以继续采集而不覆盖之前采集的任务</p>
+</li>
+<li>
+<p>误保存数据时可以指定该episode序号进行重新采集覆盖</p>
+</li>
+<li>
+<p><code>-sjp</code>：每个episode开始采集前，各关节和夹爪的初始位置，不使用该参数时默认均为0；由具体任务指定</p>
+</li>
+<li>
+<p><code>-f</code>：数据采集频率，默认为15Hz</p>
+</li>
+</ul>
+<p><strong>运行示例：</strong></p>
+<p><strong>程序启动后的按键说明：</strong></p>
+<p>不可连按 / 按住按键，否则按键的行为将全部顺序重复执行</p>
+<ul>
+<li>
+<p><code>g</code>：开启 / 关闭重力补偿</p>
+</li>
+<li>
+<p>空格：开始 / 停止 episode 记录</p>
+</li>
+<li>
+<p><code>q</code>：放弃本次记录</p>
+</li>
+<li>
+<p><code>0</code>：机械臂回到初始位置</p>
+</li>
+<li>
+<p><code>p</code>：打印当前关节位置信息</p>
+</li>
+</ul>
+<p><strong>操作步骤：</strong></p>
+<ol>
+<li>
+<p>启动程序，出现 3 个相机的实时界面</p>
+</li>
+<li>
+<p>如果无法启动 或 出现的界面数小于 3，联系 </p>
+</li>
+<li>
+<p>按<strong>空格</strong>，开始记录数据；同时开始<strong>遥操作</strong>机械臂完成任务</p>
+</li>
+<li>
+<p>任务完成后，等待采集到指定帧数（任务完成所用帧数应尽可能接近最大采集帧数）：</p>
+</li>
+<li>
+<p>若不符合采集要求，按 <code>q</code> 舍弃当前示教记录，然后按<code>0</code>键控制机械臂回到初始位置。</p>
+</li>
+<li>
+<p>若符合标准，按<strong>空格</strong>保存当前示教记录，记录保存完后，机械臂将自动返回初始位置。</p>
+</li>
+<li>
+<p>（可选）在当前目录下的 <code>demonstrations/raw/&lt;task_name&gt;/</code> 文件夹中，检查记录的 episode</p>
+</li>
+<li>
+<p>采集到的每个 episode 数据包含：3 个相机录制的视频（<code>.avi</code>） 、1 个机械臂状态记录文件（<code>.json</code>）</p>
+</li>
+</ol>
+<p><strong>补充说明：</strong></p>
+<ol>
+<li>
+<p>尽量保证完成任务的动作在<strong>即将到达最大帧数前</strong>完成，即不要过早结束动作。</p>
+</li>
+<li>
+<p>机械臂移动速度不可过快，否则采集的信息较稀疏，且图像的采集质量不高。</p>
+</li>
+<li>
+<p>将采集到的任务数据\<task\_name>文件夹存储到<strong>指定硬盘</strong>中的ALOHA/demonstrations/raw文件夹中备份。</task\_name></p>
+</li>
+</ol>
+<h2 id="_20"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4</span> 数据转换</h2>
+<blockquote>
+<p>需先配置<a href="https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#MCnydl3HEoio8hxtZAVch8MfnU5">数据转换环境</a>。</p>
+</blockquote>
+<p>首先保证激活conda环境并修改文件权限：</p>
+<p>在<strong>采集数据命令执行的相同路径</strong>下，执行如下命令将数据保存至hdf5格式：</p>
+<p>参数说明：</p>
+<ul>
+<li>
+<p>-cn：指定相机的名称。</p>
+</li>
+<li>
+<p>-tn：指定任务名，<strong>与数据采集时指定的任务名相同</strong>。</p>
+</li>
+<li>
+<p>-se：指定数据的起始序号。</p>
+</li>
+<li>
+<p>-ee：指定数据的结束序号。</p>
+</li>
+<li>
+<p>-rn：双臂任务指定-rn 2。</p>
+</li>
+</ul>
+<p>该命令将从当前目录下的demonstrations/raw文件夹中寻找指定名称的任务数据，将其转换到demonstrations/hdf5文件夹中。</p>
+<p>最后记得将采集到的任务数据\<task\_name>文件夹存储到<strong>指定硬盘</strong>中的ALOHA/demonstrations/hdf5文件夹中备份。</task\_name></p>
+<h2 id="_21"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5</span> 数据回放（可选）</h2>
+<blockquote>
+<p>通过数据回放的效果可以验证采集的数据、机械臂的零点设置等是否有问题（需先配置<a href="https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#LlYvdcqgTozwCixv5uIcYk0FnXg">数据回放环境</a>）。</p>
+</blockquote>
+<p>先激活conda环境：</p>
+<p>命令及参数说明如下：</p>
+<ul>
+<li>
+<p>-tn：指定任务名称</p>
+</li>
+<li>
+<p>-ei：指定hdf文件对应的id</p>
+</li>
+<li>
+<p>-cb：初始是哪个can id</p>
+</li>
+<li>
+<p>-ii：不回放相机数据</p>
+</li>
+<li>
+<p>-ia：不回放动作数据</p>
+</li>
+</ul>
+<h2 id="_22"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6</span> 参数配置</h2>
+<p><strong>模型训练、推理前</strong>需要先进行参数配置。在act/task_configs文件中<strong>创建一个与任务名相同的Python文件（不是在example_task.文件中修改）</strong>对任务进行配置，主要包括<strong>修改各种路径</strong>（通过replace_task_name使用<strong>默认路径</strong>或手动指定路径替换）、相机名称（camera_names）和机器人数量（robot_num，<strong>双臂任务设置为2</strong>）等等。以下是example_task.py中的示例，其演示了如何基于template.py中的默认配置进行修改，而不需要全部重写（全部可调整配置详见act/task_configs/template.py）：</p>
+<p><img alt="" src="../images/aloha-image-2.png"/></p>
+<p>使用<strong>默认路径训练</strong>时，需要将转换得到的hdf5格式的数据放于<code>act/data/hdf5/&lt;task_name&gt;</code>文件夹中，可执行如下命令创建目录：</p>
+<p>可执行如下命令进行复制：</p>
+<blockquote>
+<ul>
+<li>CKPT_DIR和STATS_PATH若不存在将会<strong>自动创建并写入</strong>相关文件。</li>
+</ul>
+</blockquote>
+<h2 id="_23"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.7</span> 模型训练</h2>
+<blockquote>
+<p>请先完成<a href="https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#P9ORdO7EGoRTRLxFJllctg8NnDb">模型训练环境配置</a>和<a href="https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#KchBdojIIo18u4xG7nicTym2nAf">参数配置</a>（Please use at least 2 collected data to train）。</p>
+</blockquote>
+<p>上述命令不带任何命令行参数时<strong>将根据指定的任务名使用前述task_configs中的配置</strong>，若使用命令行参数，则将覆盖前述配置，这样可以方便临时更改参数，但并不推荐。</p>
+<p>训练结束后，默认可以在./my_ckpt/\<task\_name>目录下看到<strong>两个文件夹</strong>，其中ckpt中存储了中间过程的权重文件（称为<strong>过程文件夹</strong>）；而与\<task\_name>同名的文件夹（称为<strong>核心文件夹</strong>）下存储了最后权重、最优权重、统计数据、训练关键信息（包含初始关节角、训练参数配置等）以及训练过程的loss曲线图等文件：</task\_name></task\_name></p>
+<p><img alt="" src="../images/aloha-image.png"/></p>
+<p>为了方便后续使用，将<strong>核心文件夹</strong>存储到<strong>指定硬盘</strong>中的ALOHA/my_ckpt文件夹中。</p>
+<blockquote>
+<p>训练调参建议：</p>
+<p>- Chunk size is the most important param to tune when applying ACT to a new environment. One chunk should correspond to \~1 secs wall-clock robot motion. (原文50Hz控制频率用了90的chunk size)</p>
+<p>- High KL weight (10 or 100), or train <strong><em>without</em></strong> CVAE encoder.</p>
+<p>- Consider removing temporal_agg and increase query frequency <a href="https://github.com/tonyzhaozh/act/blob/main/imitate_episodes.py#L193">here</a> to be the same as your chunk size. I.e. each chunk is executed fully.</p>
+<p>- train for <strong>very long</strong> (well after things plateaus, see picture)</p>
+<p>- Try to increase batch size as much as possible, and increase lr accordingly. E.g. batch size 64 with learning rate 5e-5 versus batch size 8 and learning rate 1e-5</p>
+<p>- Have separate backbones for each camera (requires changing the code, see <a href="https://github.com/tonyzhaozh/act/commit/20fc6e990698534b89a41c2c85f54b7ff4b0c280">this commit</a>)</p>
+<p>- L1 loss &gt; L2 loss (not precise enough)</p>
+<p>- Abs position control &gt; delta/velocity control (harder to recover)</p>
+<p>- Try multiple checkpoints</p>
+<p>For real-world experiments:</p>
+<p>- Train for even longer (5k - 8k epochs, especially if multi-camera)</p>
+<p>- If inference is too slow -&gt; robot moving slowly: disable temporal_agg and increase query frequency <a href="https://github.com/tonyzhaozh/act/blob/main/imitate_episodes.py#L193">here</a>. We tried as high as 20.</p>
+</blockquote>
+<h2 id="_24"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8</span> 模型使用</h2>
+<blockquote>
+<p>请先完成<a href="https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#JW3XdhzIQojkoSxb31MclroFnPh">模型推理环境配置</a>和<a href="https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#KchBdojIIo18u4xG7nicTym2nAf">参数配置</a>。</p>
+</blockquote>
+<h3 id="_25"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.1</span> 环境准备</h3>
+<ul>
+<li>
+<p>首先将示教臂和执行臂的USB接口都拔掉以刷新CAN接口，然后只连接执行臂的USB接口（这样执行臂将使用CAN0）。</p>
+</li>
+<li>
+<p>按照与数据采集时一样的顺序<a href="https://w79rvfxw83.feishu.cn/wiki/Uur1w5GB1ivNPVkyLYxcyXjFnjJ#OyGWdWWaVoEeykxY8JacJYw1n5d">连接相机</a>（若采集完没有拔出过相机则跳过该步骤即可）。</p>
+</li>
+<li>
+<p>长按开启机械臂电源开关。</p>
+</li>
+</ul>
+<h3 id="_26"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.2</span> 执行命令</h3>
+<p>先进入act文件夹中并激活conda环境：</p>
+<p>命令及参数说明如下：</p>
+<ul>
+<li>
+<p>-ci: 相机设备号，需要与配置的相机名字的对应的设备顺序相对应。</p>
+</li>
+<li>
+<p>-ts: 任务对应的时间戳（查看模型训练结果保存的路径获取，例如：act/my_ckpt/test_task/20240325-153007）。若不采用默认路径配置可能没有时间戳，此时可移除该参数。</p>
+</li>
+<li>
+<p>-cki: 不启动机械臂，仅展示采集到的相机图像，用于确定相机顺序是否与采集数据时一致。</p>
+</li>
+<li>
+<p>-can: 指定使用哪个can进行控制，默认是can0；改为can1则：<code>-can can1</code>。对于双臂任务，需要指定多个can，如：<code>-can can0,can1</code>。</p>
+</li>
+</ul>
+<p>机械臂启动后会移动到任务定义的初始位置，等待终端提示，然后<strong>按回车键开始进行推理</strong>。推理结束按回车键结束，机械臂将返回零位。</p>
+<p>每次评估结束后，将在eval_results文件夹中看到该任务的评估结果相关文件（包含过程视频）。</p>
+<h2 id="_27"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.9</span> 信息查看</h2>
+<p>模型训练后在key_info.pkl文件中存储了训练时的关键数据，可以通过如下方式查看。</p>
+<p>首先进入act并激活conda环境：</p>
+<p>然后执行如下命令查看指定时间戳（注意是训练结果保存的时间戳）的信息：</p>
+<p>将在终端看到与该任务相关的信息输出，例如：</p>
+<p><img alt="" src="../images/aloha-image-3.png"/></p>
+<p>其中包括了训练时的全部配置、训练数据的初始关节角等信息。通过这些信息，我们可以确定如下关键信息：</p>
+<ul>
+<li>
+<p>训练时使用的hdf5数据位于的绝对路径。</p>
+</li>
+<li>
+<p>训练时的参数配置。</p>
+</li>
+<li>
+<p>推理时应该使用的初始关节角。</p>
+</li>
+<li>
+<p>其他信息。</p>
+</li>
+</ul>
+<p>这些信息为实验的可复现性提供保证。由于目前相机与机械臂固连，因此机械臂智能系统本身的复现较为容易。对于物体摆放位置则可以通过重放示教数据的方式确定。</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Intro" class="md-footer__link md-footer__link--prev" href="../intro/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Intro
+              </div>
+</div>
+</a>
+<a aria-label="Next: Basic Operating Instructions" class="md-footer__link md-footer__link--next" href="../../AIRBOT-Play/AIRBOT-Play-Basic-Operating-Instructions/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Basic Operating Instructions
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<div class="md-progress" data-md-component="progress" role="progressbar"></div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+</body>
+</html>
