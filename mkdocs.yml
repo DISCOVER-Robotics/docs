@@ -81,7 +81,7 @@ nav:
     - sdk/intro.md
     - C++ Interface: "https://discover-robotics.github.io/docs/cpp/"
     - ROS1 Interface: sdk/ROS1.md
-    - Python Interface: "https://discover-robotics.github.io/docs/python/"
+    - Python Interface: Airbot-Python/
   - Applications:
     - applications/intro.md
     - ALOHA: applications/aloha.md
