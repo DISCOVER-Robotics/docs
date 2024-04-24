@@ -297,3 +297,6 @@ airbot_play_node
 ??? question "多模态感知包含哪些？是否可以提供？"
     多模态包括末端视觉、末端触觉、环境语音、场景SOP说明等，多模态感知融合多种环境信息进行长程任务执行。
     我们可以根据需求，提供相关代码包。
+
+## 资源下载
+[URDF](https://airbots.online/file/AIRBOT产品手册CN0409.zip)
