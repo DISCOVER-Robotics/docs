@@ -37,15 +37,15 @@ jobs:
       - run: sudo apt install -y can-utils cmake libeigen3-dev libcppunit-dev liburdfdom-dev libtinyxml2-dev libkdl-parser-dev libboost-serialization-dev libboost-thread-dev build-essential libncurses5-dev libspdlog-dev libfmt-dev
       - run: cd thirdparty/python-interface-docs && pip install -r requirements.txt
       - run: cd thirdparty/sdk && git submodule update --init --recursive && cd python && python -m pybind11_mkdoc -o src/doc.hpp -I/usr/include/eigen3 -std=c++17 /usr/include/airbot/command/command_base.hpp /usr/include/airbot/modules/motors/motor_driver.hpp && pip install -e .
-      - run: cd thirdparty/python-interface-docs && make html
+      - run: cd thirdparty/python-interface-docs && make html && touch build/html/.nojekyll
       - run: cp -r thirdparty/python-interface-docs/build/html public/python
-      - run: touch .nojekyll
       - run: |
           git config --global user.name github-actions[bot]
           git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
       - run: |
           cd public
           git init
+          touch .nojekyll
           git add .
           git checkout -b gh-pages
           git commit -m "Deploy"
