@@ -48,6 +48,10 @@ plugins:
   - enumerate-headings:
       increment_across_pages: false
       exclude_h1: true
+  - redirects:
+      redirect_maps:
+        'index.md': 'manual/index.md'
+
 extra:
   version:
     provider: mike
@@ -82,10 +86,12 @@ nav:
     - C++ Interface: "https://discover-robotics.github.io/docs/cpp/"
     - ROS1 Interface: sdk/ROS1.md
     - Python Interface: Airbot-Python/
+    - SDK Interface: sdk/sdk.md
   - Applications:
     - applications/intro.md
     - ALOHA: applications/aloha.md
     - Basic Operating Instructions: AIRBOT-Play/AIRBOT-Play-Basic-Operating-Instructions.md
     - Building Block -Gazebo: AIRBOT-Play/AIRBOT-Play-Gazebo.md
     - Building Block -IL: AIRBOT-Play/AIRBOT-Play-IL.md
+
 
