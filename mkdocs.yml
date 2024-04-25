@@ -87,11 +87,11 @@ nav:
     - ROS1 Interface: sdk/ROS1.md
     - Python Interface: "https://discover-robotics.github.io/docs/python/"
     # - SDK Interface: sdk/sdk.md
-  - Applications:
-    - applications/intro.md
-    - ALOHA: applications/aloha.md
-    - Basic Operating Instructions: AIRBOT-Play/AIRBOT-Play-Basic-Operating-Instructions.md
-    - Building Block -Gazebo: AIRBOT-Play/AIRBOT-Play-Gazebo.md
-    - Building Block -IL: AIRBOT-Play/AIRBOT-Play-IL.md
+  # - Applications:
+  #   - applications/intro.md
+  #   - ALOHA: applications/aloha.md
+  #   - Basic Operating Instructions: AIRBOT-Play/AIRBOT-Play-Basic-Operating-Instructions.md
+  #   - Building Block -Gazebo: AIRBOT-Play/AIRBOT-Play-Gazebo.md
+  #   - Building Block -IL: AIRBOT-Play/AIRBOT-Play-IL.md
 
 
