@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master 
+      - dev
       - main
 permissions:
   contents: write
@@ -27,18 +28,10 @@ jobs:
       - run: pip install -r requirements.txt
       - run: pip install thirdparty/mkdocs-enumerate-headings-plugin
       - run: mkdocs gh-deploy --force
-      - uses: mattnotmitt/doxygen-action@v1.9.5
-        with:
-            working-directory: 'thirdparty/arm-control'
-            # enable-latex: true
-      - run: mkdir -p public && cp -r thirdparty/arm-control/doc/html public/cpp
-        # python interface docs generate
-      - run: sudo apt install -y ./.github/workflows/airbot_play_2.7.1_amd64.deb
-      - run: sudo apt install -y can-utils cmake libeigen3-dev libcppunit-dev liburdfdom-dev libtinyxml2-dev libkdl-parser-dev libboost-serialization-dev libboost-thread-dev build-essential libncurses5-dev libspdlog-dev libfmt-dev
-      - run: cd thirdparty/python-interface-docs && pip install -r requirements.txt
-      - run: cd thirdparty/sdk && git submodule update --init --recursive && cd python && python -m pybind11_mkdoc -o src/doc.hpp -I/usr/include/eigen3 -std=c++17 /usr/include/airbot/command/command_base.hpp /usr/include/airbot/modules/motors/motor_driver.hpp && pip install -e .
-      - run: cd thirdparty/python-interface-docs && make html && touch build/html/.nojekyll
-      - run: cp -r thirdparty/python-interface-docs/build/html public/python
+      # copy cpp doc to public
+      - run: mkdir -p public && cp -r thirdparty/arm-control/html public/cpp
+      # copy python doc to public
+      - run: cp -r thirdparty/pythondoc/html public/python
       - run: |
           git config --global user.name github-actions[bot]
           git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
