@@ -55,13 +55,13 @@ plugins:
 extra:
   version:
     provider: mike
-  alternate:
-    - name: English
-      link: /docs
-      lang: en
-    - name: Chinese
-      link: /docs/zh/ 
-      lang: zh
+  # alternate:
+  #   - name: English
+  #     link: /docs
+  #     lang: en
+  #   - name: Chinese
+  #     link: /docs/zh/ 
+  #     lang: zh
   homepage: https://airbots.online
 markdown_extensions:
   - pymdownx.highlight:
