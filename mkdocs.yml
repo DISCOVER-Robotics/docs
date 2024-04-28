@@ -90,7 +90,7 @@ nav:
     # - SDK Interface: sdk/sdk.md
   - Applications:
     # - applications/intro.md
-    - ALOHA: "https://discover-robotics.github.io/docs/sdk/aloha/"
+    - ALOHA: sdk/aloha.md
     # - Basic Operating Instructions: AIRBOT-Play/AIRBOT-Play-Basic-Operating-Instructions.md
     # - Building Block -Gazebo: AIRBOT-Play/AIRBOT-Play-Gazebo.md
     # - Building Block -IL: AIRBOT-Play/AIRBOT-Play-IL.md
