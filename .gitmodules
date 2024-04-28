@@ -8,6 +8,7 @@
 [submodule "thirdparty/sdk"]
 	path = thirdparty/sdk
 	url = git@github.com:DISCOVER-Robotics/sdk.git
+	branch = develop
 [submodule "thirdparty/pythondoc"]
 	path = thirdparty/pythondoc
 	url = git@github.com:DISCOVER-Robotics/sdk.git
