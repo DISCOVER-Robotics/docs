@@ -55,13 +55,13 @@ plugins:
 extra:
   version:
     provider: mike
-  # alternate:
-  #   - name: English
-  #     link: /docs
-  #     lang: en
-  #   - name: Chinese
-  #     link: /docs/zh/ 
-  #     lang: zh
+  alternate:
+    - name: English
+      link: /docs
+      lang: en
+    - name: Chinese
+      link: /docs/zh/ 
+      lang: zh
   homepage: https://airbots.online
 markdown_extensions:
   - pymdownx.highlight:
@@ -94,7 +94,7 @@ nav:
     # - Basic Operating Instructions: AIRBOT-Play/AIRBOT-Play-Basic-Operating-Instructions.md
     # - Building Block -Gazebo: AIRBOT-Play/AIRBOT-Play-Gazebo.md
     # - Building Block -IL: AIRBOT-Play/AIRBOT-Play-IL.md
-    - ESC: firmware/esc/README.md
-    - ESC: firmware/base/README.md
+    - ESC: applications/esc/README.md
+    - Base: applications/base/README.md
 
 
