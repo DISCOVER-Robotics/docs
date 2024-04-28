@@ -1,10 +1,10 @@
 # Firmware Burning for Mechanical Arm Base Interface Board
 
-## 1.Download Firmware
+## Download Firmware
 
 [arm-interface-board-base](https://empty)
 
-## 2.Install CubeProgrammer
+## Install CubeProgrammer
 
 [CubeProgrammer Download Link](https://www.st.com/en/development-tools/stm32cubeprog.html)
 
@@ -32,7 +32,7 @@ After selecting the path, click `Next`. If the path does not exist, a pop-up win
 Then, check `I have read and understood the ST Terms of Use` and keep clicking `Next` until the installation completes, then click `Done`.
 
 
-## 3.烧录程序
+## Burn Firmware
 Use a DuPont wire/toothpick or similar slender tool to press the CONFIG button, ensuring that the base interface board is powered off at this time (neither POWER nor USB cables are connected).
 ![baseboard_image4](assets/baseboard_image4.png)
 Connect USB-2 port to the computer using a Type-C data cable.
