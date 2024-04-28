@@ -7,6 +7,3 @@
 [submodule "thirdparty/sdk"]
 	path = thirdparty/sdk
 	url = git@github.com:DISCOVER-Robotics/sdk.git
-[submodule "thirdparty/python-interface-docs"]
-	path = thirdparty/python-interface-docs
-	url = git@github.com:DISCOVER-Robotics/python-interface-docs.git
