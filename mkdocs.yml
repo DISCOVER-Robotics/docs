@@ -94,7 +94,8 @@ nav:
     # - Basic Operating Instructions: AIRBOT-Play/AIRBOT-Play-Basic-Operating-Instructions.md
     # - Building Block -Gazebo: AIRBOT-Play/AIRBOT-Play-Gazebo.md
     # - Building Block -IL: AIRBOT-Play/AIRBOT-Play-IL.md
-    - ESC: applications/esc/README.md
-    - Base: applications/base/README.md
+    - Firmware upgrade:
+      - Electronic Speed Controller: applications/esc/README.md
+      - Baseboard: applications/base/README.md
 
 

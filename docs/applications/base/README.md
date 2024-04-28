@@ -2,7 +2,7 @@
 
 ## Download Firmware
 
-[arm-interface-board-base](https://empty)
+[arm-interface-board-base.bin](https://127.0.0.1)
 
 ## Install CubeProgrammer
 
