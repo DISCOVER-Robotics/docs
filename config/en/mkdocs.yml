@@ -1,7 +1,7 @@
 site_name: AIRBOT 产品文档
 site_url: https://discover-robotics.github.io/docs
-docs_dir: '../../docs'                           # Where to find the English markdown files
-site_dir: '../../public'                      # Where to put the English HTML files
+docs_dir: '../../docs'                           # mkdocs build -f config/en/mkdocs.yml
+site_dir: '../../public'                      
 
 theme:
   language: en 
