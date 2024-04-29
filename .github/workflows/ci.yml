@@ -1,8 +1,8 @@
-name: ci 
+name: ci
 on:
   push:
     branches:
-      - master 
+      - master
       - dev
       - main
 permissions:
@@ -18,7 +18,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: 3.9
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
       - uses: actions/cache@v4
         with:
           key: mkdocs-material-${{ env.cache_id }}
@@ -27,9 +27,11 @@ jobs:
             mkdocs-material-
       - run: pip install -r requirements.txt
       - run: pip install thirdparty/mkdocs-enumerate-headings-plugin
-      - run: mkdocs gh-deploy --force
+      # - run: mkdocs gh-deploy --force
+      - run: mkdocs build -f config/en/mkdocs.yml
+      - run: mkdocs build -f config/zh/mkdocs.yml
       # copy cpp doc to public
-      - run: mkdir -p public && cp -r thirdparty/arm-control/html public/cpp
+      - run: cp -r thirdparty/arm-control/html public/cpp
       # copy python doc to public
       - run: cp -r thirdparty/pythondoc/html public/python
       - run: |
