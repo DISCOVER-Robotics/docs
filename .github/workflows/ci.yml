@@ -36,6 +36,9 @@ jobs:
           git config --global user.name github-actions[bot]
           git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
       - run: |
+          mkdocs build -f config/en/mkdocs.yml
+          mkdocs build -f config/zh/mkdocs.yml
+      - run: |
           cd public
           git init
           touch .nojekyll
