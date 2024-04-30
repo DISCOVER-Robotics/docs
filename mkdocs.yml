@@ -1,5 +1,5 @@
 site_name: AIRBOT 产品文档
-site_url: https://discover-robotics.github.io/docs
+site_url: https://docs.airbots.online/docs
 site_dir: public
 theme:
   language: en 
@@ -83,9 +83,9 @@ nav:
   - User Manual: manual/index.md
   - Software SDK: 
     - sdk/intro.md
-    - C++ Interface: "https://discover-robotics.github.io/docs/cpp/"
+    - C++ Interface: "https://docs.airbots.online/cpp/annotated.html"
     - ROS1 Interface: sdk/ROS1.md
-    - Python Interface: "https://discover-robotics.github.io/docs/python/"
+    - Python Interface: "https://docs.airbots.online/python/"
     # - Python Interface: Airbot_Python/
     # - SDK Interface: sdk/sdk.md
   - Applications:
