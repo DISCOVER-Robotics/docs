@@ -83,9 +83,9 @@ nav:
   - User Manual: manual/index.md
   - Software SDK: 
     - sdk/intro.md
-    - C++ Interface: "https://docs.airbots.online/cpp/annotated.html"
+    - C++ Interface: "https://discover-robotics.github.io/docs/cpp/annotated.html"
     - ROS1 Interface: sdk/ROS1.md
-    - Python Interface: "https://docs.airbots.online/python/"
+    - Python Interface: "https://discover-robotics.github.io/docs/python/"
     # - Python Interface: Airbot_Python/
     # - SDK Interface: sdk/sdk.md
   - Applications:
