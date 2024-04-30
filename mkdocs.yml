@@ -1,5 +1,5 @@
 site_name: AIRBOT 产品文档
-site_url: https://https://discover-robotics.github.io/docs
+site_url: https://discover-robotics.github.io/docs
 site_dir: public
 theme:
   language: en 
