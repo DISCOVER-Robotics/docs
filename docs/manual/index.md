@@ -217,7 +217,7 @@ hide:
 ### 开机与标零
 #### 准备电脑
 
-在 Ubuntu 20.04 系统安装最新的机械臂软件包，并配置好环境，安装 [`airbot_play`](#) 与 [`airbot_tools`]() 两个软件包
+在 Ubuntu 20.04 系统安装最新的机械臂软件包，并配置好环境，使用`sudo apt install ./<软件包名>`命令安装`airbot_play_<version>_<arch>.deb`与`airbot_tools_<version>_<arch>.deb`两个软件包(联系售后客服获取)。
 
 #### 标零  
 
