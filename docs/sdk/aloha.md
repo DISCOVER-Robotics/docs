@@ -1,1 +1,1 @@
-../../thirdparty/sdk/examples/cpp/airbot_aloha/README.md
+../../thirdparty/sdk/examples/airbot_aloha/README.md

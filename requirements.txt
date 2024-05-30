@@ -8,3 +8,5 @@ mkdocs-material>=5.4.0
 # To use this plugin
 # (https://github.com/mkdocs/mkdocs-redirects)
 mkdocs-redirects
+
+mike

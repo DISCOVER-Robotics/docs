@@ -1,8 +1,3 @@
----
-hide:
-  - navigation
----
-
 # AIRBOT Play 用户手册   
 
 ## 机械臂包装清单

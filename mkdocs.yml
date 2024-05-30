@@ -53,15 +53,8 @@ plugins:
         'index.md': 'manual/index.md'
 
 extra:
-  version:
-    provider: mike
-  alternate:
-    - name: English
-      link: /docs
-      lang: en
-    - name: Chinese
-      link: /docs/zh/ 
-      lang: zh
+  # version:
+  #   provider: mike
   homepage: https://airbots.online
 markdown_extensions:
   - pymdownx.highlight:
@@ -80,22 +73,17 @@ markdown_extensions:
   - md_in_html
 
 nav:
-  - User Manual: manual/index.md
+  - Product Manual:
+    - AIRBOT Play: manual/airbot-play/index.md
+    - AIRBOT Play Pro: manual/airbot-play-pro/index.md
   - Software SDK: 
-    - sdk/intro.md
+    - sdk/index.md
     - C++ Interface: "https://discover-robotics.github.io/docs/cpp/annotated.html"
     - ROS1 Interface: sdk/ROS1.md
     - Python Interface: "https://discover-robotics.github.io/docs/python/"
-    # - Python Interface: Airbot_Python/
-    # - SDK Interface: sdk/sdk.md
   - Applications:
-    # - applications/intro.md
     - ALOHA: sdk/aloha.md
-    # - Basic Operating Instructions: AIRBOT-Play/AIRBOT-Play-Basic-Operating-Instructions.md
-    # - Building Block -Gazebo: AIRBOT-Play/AIRBOT-Play-Gazebo.md
-    # - Building Block -IL: AIRBOT-Play/AIRBOT-Play-IL.md
-    - Firmware upgrade:
-      - Electronic Speed Controller: applications/esc/README.md
-      - Baseboard: applications/base/README.md
+  - Firmware Upgrade Guide:
+    - AIRBOT Play: upgrade/airbot-play.md
 
 
