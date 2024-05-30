@@ -28,7 +28,7 @@ jobs:
       - run: pip install -r requirements.txt
       - run: pip install thirdparty/mkdocs-enumerate-headings-plugin
       # - run: mkdocs gh-deploy --force
-      - run: mike deploy --push --update-aliases
+      - run: mike deploy --push --update-aliases latest
       # copy cpp doc to public
       - run: mkdir -p public && cp -r thirdparty/arm-control/html public/cpp
       # copy python doc to public
