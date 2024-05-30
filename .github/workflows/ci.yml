@@ -34,7 +34,7 @@ jobs:
       # - run: mkdocs gh-deploy --force
       - run: mike deploy --push --update-aliases latest
       # copy cpp doc to public
-      - run: git clone --recursive -b gh-pages https://${{ secrets.GH_PAT }}@github.com/DISCOVER-Robotics/docs.git pages
+      - run: git clone -b gh-pages https://${{ secrets.GH_PAT }}@github.com/DISCOVER-Robotics/docs.git pages
       - run: cp -r thirdparty/arm-control/html pages/latest/cpp
       - run: cp -r thirdparty/pythondoc/html pages/latest/python
       - run: git add .
