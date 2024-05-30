@@ -39,4 +39,4 @@ jobs:
       - run: cp -r thirdparty/pythondoc/html pages/latest/python
       - run: git add .
       - run: git commit -m "Deploy"
-      - run: git push
+      - run: cd pages && git push
