@@ -82,7 +82,7 @@ nav:
     - sdk/index.md
     - C++ Interface: cpp/annotated.html
     - ROS1 Interface: sdk/ROS1.md
-    - Python Interface: docs/python/
+    - Python Interface: python/
   - Applications:
     - ALOHA: sdk/aloha.md
   - Firmware Upgrade Guide:
