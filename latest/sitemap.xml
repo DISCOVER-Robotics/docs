@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://docs.airbots.online/docs/latest/manual/airbot-play/</loc>
+         <loc>http://127.0.0.1:8000/docs/latest/manual/airbot-play/</loc>
          <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.airbots.online/docs/latest/manual/airbot-play-pro/</loc>
+         <loc>http://127.0.0.1:8000/docs/latest/manual/airbot-play-pro/</loc>
          <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.airbots.online/docs/latest/sdk/</loc>
+         <loc>http://127.0.0.1:8000/docs/latest/sdk/</loc>
          <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.airbots.online/docs/latest/sdk/ROS1/</loc>
+         <loc>http://127.0.0.1:8000/docs/latest/sdk/ROS1/</loc>
          <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.airbots.online/docs/latest/sdk/aloha/</loc>
+         <loc>http://127.0.0.1:8000/docs/latest/sdk/aloha/</loc>
          <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.airbots.online/docs/latest/sdk/sdk/</loc>
+         <loc>http://127.0.0.1:8000/docs/latest/sdk/sdk/</loc>
          <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.airbots.online/docs/latest/upgrade/airbot-play/</loc>
+         <loc>http://127.0.0.1:8000/docs/latest/upgrade/airbot-play/</loc>
          <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
