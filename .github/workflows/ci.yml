@@ -27,22 +27,16 @@ jobs:
             mkdocs-material-
       - run: pip install -r requirements.txt
       - run: pip install thirdparty/mkdocs-enumerate-headings-plugin
-      # - run: mkdocs gh-deploy --force
       - run: git fetch origin gh-pages --depth=1
       - run: |
           git config --global user.name github-actions[bot]
           git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
-      # copy cpp doc to public
-      - run: mkdir -p public/latest
-      - run: cp -r thirdparty/arm-control/html public/latest/cpp
-      - run: cp -r thirdparty/pythondoc/html public/latest/python
-      # - run: |
-      #     cd public
-      #     git init
-      #     touch .nojekyll
-      #     git add .
-      #     git checkout -b gh-pages
-      #     git commit -m "Deploy"
-      #     git remote add origin https://${{ secrets.GH_PAT }}@github.com/DISCOVER-Robotics/docs.git
-      #     git push --force --set-upstream origin gh-pages
+      # - run: mkdocs gh-deploy --force
       - run: mike deploy --push --update-aliases latest
+      # copy cpp doc to public
+      - run: git clone --recursive -b gh-pages https://${{ secrets.GH_PAT }}@github.com/DISCOVER-Robotics/docs.git pages
+      - run: cp -r thirdparty/arm-control/html pages/latest/cpp
+      - run: cp -r thirdparty/pythondoc/html pages/latest/python
+      - run: git add .
+      - run: git commit -m "Deploy"
+      - run: git push
