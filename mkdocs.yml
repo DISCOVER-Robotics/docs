@@ -53,8 +53,8 @@ plugins:
         'index.md': 'manual/index.md'
 
 extra:
-  # version:
-  #   provider: mike
+  version:
+    provider: mike
   homepage: https://airbots.online
 markdown_extensions:
   - pymdownx.highlight:
