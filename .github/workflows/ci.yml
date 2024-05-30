@@ -28,6 +28,8 @@ jobs:
       - run: pip install -r requirements.txt
       - run: pip install thirdparty/mkdocs-enumerate-headings-plugin
       # - run: mkdocs gh-deploy --force
+      - run: git config user.name ci-bot
+      - run: git config user.email ci-bot@example.com
       - run: mike deploy --push --update-aliases latest
       # copy cpp doc to public
       - run: mkdir -p public && cp -r thirdparty/arm-control/html public/cpp
