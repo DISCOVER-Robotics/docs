@@ -29,16 +29,13 @@ jobs:
       - run: pip install thirdparty/mkdocs-enumerate-headings-plugin
       # - run: mkdocs gh-deploy --force
       - run: git fetch origin gh-pages --depth=1
-      - run: git config user.name ci-bot
-      - run: git config user.email ci-bot@example.com
-      - run: mike deploy --push --update-aliases latest
-      # # copy cpp doc to public
-      # - run: mkdir -p public && cp -r thirdparty/arm-control/html public/cpp
-      # # copy python doc to public
-      # - run: cp -r thirdparty/pythondoc/html public/python
-      # - run: |
-      #     git config --global user.name github-actions[bot]
-      #     git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - run: |
+          git config --global user.name github-actions[bot]
+          git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
+      # copy cpp doc to public
+      - run: mkdir -p public/latest
+      - run: cp -r thirdparty/arm-control/html public/latest/cpp
+      - run: cp -r thirdparty/pythondoc/html public/latest/python
       # - run: |
       #     cd public
       #     git init
@@ -48,3 +45,4 @@ jobs:
       #     git commit -m "Deploy"
       #     git remote add origin https://${{ secrets.GH_PAT }}@github.com/DISCOVER-Robotics/docs.git
       #     git push --force --set-upstream origin gh-pages
+      - run: mike deploy --push --update-aliases latest

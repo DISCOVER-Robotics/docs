@@ -1,5 +1,5 @@
 site_name: AIRBOT 产品文档
-site_url: https://docs.airbots.online/docs
+site_url: http://127.0.0.1:8000/docs
 site_dir: public
 theme:
   language: en 
@@ -50,11 +50,13 @@ plugins:
       exclude_h1: true
   - redirects:
       redirect_maps:
-        'index.md': 'manual/index.md'
+        'index.md': 'manual/airbot-play/index.md'
 
 extra:
   version:
     provider: mike
+    default: latest
+    alias: true
   homepage: https://airbots.online
 markdown_extensions:
   - pymdownx.highlight:
@@ -78,9 +80,9 @@ nav:
     - AIRBOT Play Pro: manual/airbot-play-pro/index.md
   - Software SDK: 
     - sdk/index.md
-    - C++ Interface: "https://discover-robotics.github.io/docs/cpp/annotated.html"
+    - C++ Interface: cpp/annotated.html
     - ROS1 Interface: sdk/ROS1.md
-    - Python Interface: "https://discover-robotics.github.io/docs/python/"
+    - Python Interface: docs/python/
   - Applications:
     - ALOHA: sdk/aloha.md
   - Firmware Upgrade Guide:
