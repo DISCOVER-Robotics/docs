@@ -1,0 +1,8 @@
+#ifndef AIRBOT_HPP
+#define AIRBOT_HPP
+#define AIRBOT_VERSION "@VERSION_STR@"
+#include "airbot/command/command_base.hpp"
+#include "airbot/utils.hpp"
+#include "airbot/modules/modules.hpp"
+const std::string URDF_INSTALL_PATH = "/usr/local/share/airbot_play/airbot_play_v2_1/urdf/";
+#endif
