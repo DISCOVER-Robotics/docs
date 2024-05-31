@@ -80,7 +80,7 @@ nav:
     - AIRBOT Play Pro: manual/airbot-play-pro/index.md
   - Software SDK: 
     - sdk/index.md
-    - C++ Interface: cpp/annotated.html
+    - C++ Interface: cpp/
     - ROS1 Interface: sdk/ROS1.md
     - Python Interface: python/
   - Applications:
