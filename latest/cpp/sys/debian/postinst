@@ -1,9 +1,0 @@
-#!/bin/sh
-set -e
-
-# Reload udev rules and trigger them
-chmod +x /usr/bin/configure-can.sh
-udevadm control --reload-rules
-udevadm trigger
-
-/usr/bin/python3 -m pip install -r /usr/share/airbot_play/requirements.txt -i https://mirrors.ustc.edu.cn/pypi/web/simple --isolated

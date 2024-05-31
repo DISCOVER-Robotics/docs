@@ -1,2 +1,0 @@
-ACTION=="add", SUBSYSTEM=="net", ATTRS{idVendor}=="1d50", ATTRS{idProduct}=="606f", RUN+="/usr/bin/configure-can.sh %k"
-ACTION=="add", SUBSYSTEM=="net", ATTRS{idVendor}=="1d50", ATTRS{idProduct}=="606f", RUN+="/usr/local/bin/configure-can.sh %k"
