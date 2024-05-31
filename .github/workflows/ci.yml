@@ -31,10 +31,10 @@ jobs:
       - run: |
           git config --global user.name github-actions[bot]
           git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
-      # - run: mkdocs gh-deploy --force
       - run: mike deploy --push --update-aliases latest
-      # copy cpp doc to public
+      # copy external doc to pages
       - run: git clone -b gh-pages https://${{ secrets.GH_PAT }}@github.com/DISCOVER-Robotics/docs.git pages
-      - run: cp -r thirdparty/arm-control/html pages/latest/cpp
-      - run: cp -r thirdparty/pythondoc/html pages/latest/python
+      - run: mkdir -p pages/latest/cpp && mkdir -p pages/latest/python
+      - run: cp -r external/cpp/* pages/latest/cpp/
+      - run: cp -r external/python/* pages/latest/python/
       - run: cd pages && git add . && git commit -m "Deploy" && git push

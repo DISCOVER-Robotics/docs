@@ -1,15 +1,9 @@
 [submodule "thirdparty/mkdocs-enumerate-headings-plugin"]
 	path = thirdparty/mkdocs-enumerate-headings-plugin
 	url = https://github.com/TimChaubet-I4U/mkdocs-enumerate-headings-plugin.git
-[submodule "thirdparty/arm-control"]
-	path = thirdparty/arm-control
-	url = git@github.com:DISCOVER-Robotics/arm-control.git
-	branch = html
-[submodule "thirdparty/sdk"]
-	path = thirdparty/sdk
-	url = git@github.com:DISCOVER-Robotics/sdk.git
-	branch = develop
-[submodule "thirdparty/pythondoc"]
-	path = thirdparty/pythondoc
-	url = git@github.com:DISCOVER-Robotics/sdk.git
-	branch = html/python
+[submodule "external/python"]
+	path = external/python
+	url = https://github.com/DISCOVER-Robotics/sdk.git
+[submodule "external/cpp"]
+	path = external/cpp
+	url = https://github.com/DISCOVER-Robotics/arm-control.git
