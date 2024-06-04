@@ -50,7 +50,7 @@ plugins:
       exclude_h1: true
   - redirects:
       redirect_maps:
-        'index.md': 'manual/airbot-play/index.md'
+        'index.md': 'AIRBOT-Play/productManual/introduction.md'
 
 extra:
   version:
@@ -77,6 +77,7 @@ markdown_extensions:
 nav:
   - AIRBOT Play:
     - Product Manual: 
+      - Introduction: AIRBOT-Play/productManual/introduction.md
       - Detailed Parameters: AIRBOT-Play/productManual/detailedParameters.md
       - Packaging List: AIRBOT-Play/productManual/packagingList.md
       - First Steps : AIRBOT-Play/productManual/unboxingAndLighting.md
