@@ -75,17 +75,87 @@ markdown_extensions:
   - md_in_html
 
 nav:
-  - Product Manual:
-    - AIRBOT Play: manual/airbot-play/index.md
-    - AIRBOT Play Pro: manual/airbot-play-pro/index.md
-  - Software SDK: 
-    - sdk/index.md
-    - C++ Interface: cpp/
-    - ROS1 Interface: sdk/ROS1.md
-    - Python Interface: python/
-  - Applications:
-    - ALOHA: sdk/aloha.md
-  - Firmware Upgrade Guide:
-    - AIRBOT Play: upgrade/airbot-play.md
+  - AIRBOT Play:
+    - Product Manual: 
+      - Detailed Parameters: AIRBOT-Play/productManual/detailedParameters.md
+      - Packaging List: AIRBOT-Play/productManual/packagingList.md
+      - First Steps : AIRBOT-Play/productManual/unboxingAndLighting.md
+      - FAQ : AIRBOT-Play/productManual/faq.md
+    # - Use Cases:
+      # - Executabletools : AIRBOT-Play/useCases/executabletools.md
+      # - Sdk : AIRBOT-Play/useCases/sdk.md
+    - Interface Documentation:
+      - Python : python/
+      # - Web : AIRBOT-Play/interfaceDocumentation/web.md
+      - Ros1 : AIRBOT-Play/interfaceDocumentation/ros1.md
+      # - Ros2 : AIRBOT-Play/interfaceDocumentation/ros2.md
+  # - AIRBOT Play Pro: 
+  #   - Product Manual: 
+  #     - Detailed Parameters: AIRBOT-Play-Pro/productManual/detailedParameters.md
+  #     - Packaging List: AIRBOT-Play-Pro/productManual/packagingList.md
+  #     - First Steps : AIRBOT-Play-Pro/productManual/unboxingAndLighting.md
+  #     - FAQ : AIRBOT-Play-Pro/productManual/faq.md
+  #   - Use Cases:
+  #     - Executabletools : AIRBOT-Play-Pro/useCases/executabletools.md
+  #     - Sdk : AIRBOT-Play-Pro/useCases/sdk.md
+  #   - Interface Documentation:
+  #     - Python : AIRBOT-Play-Pro/interfaceDocumentation/python.md
+  #     - Web : AIRBOT-Play-Pro/interfaceDocumentation/web.md
+  #     - Ros1 : AIRBOT-Play-Pro/interfaceDocumentation/ros1.md
+  #     - Ros2 : AIRBOT-Play-Pro/interfaceDocumentation/ros2.md
+  # - Tele Operation Kit: 
+  #   - Product Manual: 
+  #     - Detailed Parameters: AIRBOT-Tele-Operation-Kit/productManual/detailedParameters.md
+  #     - Packaging List: AIRBOT-Tele-Operation-Kit/productManual/packagingList.md
+  #     - First Steps : AIRBOT-Tele-Operation-Kit/productManual/unboxingAndLighting.md
+  #     - FAQ : AIRBOT-Tele-Operation-Kit/productManual/faq.md
+  #   - Use Cases:
+  #     - Executabletools : AIRBOT-Tele-Operation-Kit/useCases/executabletools.md
+  #     - Sdk : AIRBOT-Tele-Operation-Kit/useCases/sdk.md
+  #   - Interface Documentation:
+  #     - Python : AIRBOT-Tele-Operation-Kit/interfaceDocumentation/python.md
+  #     - Web : AIRBOT-Tele-Operation-Kit/interfaceDocumentation/web.md
+  #     - Ros1 : AIRBOT-Tele-Operation-Kit/interfaceDocumentation/ros1.md
+  #     - Ros2 : AIRBOT-Tele-Operation-Kit/interfaceDocumentation/ros2.md
+  # - Practical Training Kit: 
+  #   - Product Manual: 
+  #     - Detailed Parameters: AIRBOT-Practical-Training-Kit/productManual/detailedParameters.md
+  #     - Packaging List: AIRBOT-Practical-Training-Kit/productManual/packagingList.md
+  #     - First Steps : AIRBOT-Practical-Training-Kit/productManual/unboxingAndLighting.md
+  #     - FAQ : AIRBOT-Practical-Training-Kit/productManual/faq.md
+  #   - Use Cases:
+  #     - Executabletools : AIRBOT-Practical-Training-Kit/useCases/executabletools.md
+  #     - Sdk : AIRBOT-Practical-Training-Kit/useCases/sdk.md
+  #   - Interface Documentation:
+  #     - Python : AIRBOT-Practical-Training-Kit/interfaceDocumentation/python.md
+  #     - Web : AIRBOT-Practical-Training-Kit/interfaceDocumentation/web.md
+  #     - Ros1 : AIRBOT-Practical-Training-Kit/interfaceDocumentation/ros1.md
+  #     - Ros2 : AIRBOT-Practical-Training-Kit/interfaceDocumentation/ros2.md
+  # - Mobile Manipulation Kit: 
+  #   - Product Manual: 
+  #     - Detailed Parameters: AIRBOT-Mobile-Manipulation-Kit/productManual/detailedParameters.md
+  #     - Packaging List: AIRBOT-Mobile-Manipulation-Kit/productManual/packagingList.md
+  #     - First Steps : AIRBOT-Mobile-Manipulation-Kit/productManual/unboxingAndLighting.md
+  #     - FAQ : AIRBOT-Mobile-Manipulation-Kit/productManual/faq.md
+  #   - Use Cases:
+  #     - Executabletools : AIRBOT-Mobile-Manipulation-Kit/useCases/executabletools.md
+  #     - Sdk : AIRBOT-Mobile-Manipulation-Kit/useCases/sdk.md
+  #   - Interface Documentation:
+  #     - Python : AIRBOT-Mobile-Manipulation-Kit/interfaceDocumentation/python.md
+  #     - Web : AIRBOT-Mobile-Manipulation-Kit/interfaceDocumentation/web.md
+  #     - Ros1 : AIRBOT-Mobile-Manipulation-Kit/interfaceDocumentation/ros1.md
+  #     - Ros2 : AIRBOT-Mobile-Manipulation-Kit/interfaceDocumentation/ros2.md
+  # - Product Manual:
+  #   - AIRBOT Play: manual/airbot-play/index.md
+  #   - AIRBOT Play Pro: manual/airbot-play-pro/index.md
+  # - Software SDK: 
+  #   - sdk/index.md
+  #   - C++ Interface: cpp/
+  #   - ROS1 Interface: sdk/ROS1.md
+  #   - Python Interface: python/
+  # - Applications:
+  #   - ALOHA: sdk/aloha.md
+  # - Firmware Upgrade Guide:
+  #   - AIRBOT Play: upgrade/airbot-play.md
 
 
