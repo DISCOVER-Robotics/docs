@@ -90,6 +90,7 @@ nav:
       # - Web : AIRBOT-Play/interfaceDocumentation/web.md
       - Ros1 : AIRBOT-Play/interfaceDocumentation/ros1.md
       # - Ros2 : AIRBOT-Play/interfaceDocumentation/ros2.md
+      - C++ Interface: cpp/
   # - AIRBOT Play Pro: 
   #   - Product Manual: 
   #     - Detailed Parameters: AIRBOT-Play-Pro/productManual/detailedParameters.md
@@ -104,6 +105,7 @@ nav:
   #     - Web : AIRBOT-Play-Pro/interfaceDocumentation/web.md
   #     - Ros1 : AIRBOT-Play-Pro/interfaceDocumentation/ros1.md
   #     - Ros2 : AIRBOT-Play-Pro/interfaceDocumentation/ros2.md
+  #     - C++ Interface: cpp/
   # - Tele Operation Kit: 
   #   - Product Manual: 
   #     - Detailed Parameters: AIRBOT-Tele-Operation-Kit/productManual/detailedParameters.md
@@ -118,6 +120,7 @@ nav:
   #     - Web : AIRBOT-Tele-Operation-Kit/interfaceDocumentation/web.md
   #     - Ros1 : AIRBOT-Tele-Operation-Kit/interfaceDocumentation/ros1.md
   #     - Ros2 : AIRBOT-Tele-Operation-Kit/interfaceDocumentation/ros2.md
+  #     - C++ Interface: cpp/
   # - Practical Training Kit: 
   #   - Product Manual: 
   #     - Detailed Parameters: AIRBOT-Practical-Training-Kit/productManual/detailedParameters.md
@@ -132,6 +135,7 @@ nav:
   #     - Web : AIRBOT-Practical-Training-Kit/interfaceDocumentation/web.md
   #     - Ros1 : AIRBOT-Practical-Training-Kit/interfaceDocumentation/ros1.md
   #     - Ros2 : AIRBOT-Practical-Training-Kit/interfaceDocumentation/ros2.md
+  #     - C++ Interface: cpp/
   # - Mobile Manipulation Kit: 
   #   - Product Manual: 
   #     - Detailed Parameters: AIRBOT-Mobile-Manipulation-Kit/productManual/detailedParameters.md
@@ -146,6 +150,7 @@ nav:
   #     - Web : AIRBOT-Mobile-Manipulation-Kit/interfaceDocumentation/web.md
   #     - Ros1 : AIRBOT-Mobile-Manipulation-Kit/interfaceDocumentation/ros1.md
   #     - Ros2 : AIRBOT-Mobile-Manipulation-Kit/interfaceDocumentation/ros2.md
+  #     - C++ Interface: cpp/
   # - Product Manual:
   #   - AIRBOT Play: manual/airbot-play/index.md
   #   - AIRBOT Play Pro: manual/airbot-play-pro/index.md
