@@ -31,6 +31,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Mobile-Manipulation-Kit/productManual/introduction/</loc>
+         <lastmod>2024-06-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Mobile-Manipulation-Kit/productManual/packagingList/</loc>
          <lastmod>2024-06-04</lastmod>
          <changefreq>daily</changefreq>
@@ -77,6 +82,11 @@
     </url>
     <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/productManual/faq/</loc>
+         <lastmod>2024-06-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/productManual/introduction/</loc>
          <lastmod>2024-06-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -131,6 +141,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play-Pro/productManual/introduction/</loc>
+         <lastmod>2024-06-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play-Pro/productManual/packagingList/</loc>
          <lastmod>2024-06-04</lastmod>
          <changefreq>daily</changefreq>
@@ -181,6 +196,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Practical-Training-Kit/productManual/introduction/</loc>
+         <lastmod>2024-06-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Practical-Training-Kit/productManual/packagingList/</loc>
          <lastmod>2024-06-04</lastmod>
          <changefreq>daily</changefreq>
@@ -227,6 +247,11 @@
     </url>
     <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Tele-Operation-Kit/productManual/faq/</loc>
+         <lastmod>2024-06-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Tele-Operation-Kit/productManual/introduction/</loc>
          <lastmod>2024-06-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
