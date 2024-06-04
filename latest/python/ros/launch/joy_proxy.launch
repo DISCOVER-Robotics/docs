@@ -1,3 +1,0 @@
-<launch>
-    <node name="joy_proxy" pkg="ros_interface" type="joy_proxy" output="screen" />
-</launch>
