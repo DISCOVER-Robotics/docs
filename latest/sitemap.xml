@@ -31,22 +31,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/sdk/python/</loc>
-         <lastmod>2024-06-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/sdk/ros1/</loc>
          <lastmod>2024-06-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/sdk/ros2/</loc>
-         <lastmod>2024-06-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/sdk/web/</loc>
          <lastmod>2024-06-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -77,16 +67,6 @@
     </url>
     <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/tutorials/upgrade/</loc>
-         <lastmod>2024-06-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://127.0.0.1:8000/docs/latest/sdk/</loc>
-         <lastmod>2024-06-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://127.0.0.1:8000/docs/latest/sdk/ROS1/</loc>
          <lastmod>2024-06-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
