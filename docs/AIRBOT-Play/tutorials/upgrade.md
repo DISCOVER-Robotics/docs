@@ -110,7 +110,7 @@ The 1st to 3rd motor controllers are connected to the base interface board. The 
     Make sure the power supply is attached to the AIRBOT Play when upgrading the firmware.
 
 !!! info "Install `airbot_play` first"
-    Before upgrading the motor controller firmware, the `airbot_play` package should be installed first. See [here](../sdk/sdk.md).
+    Before upgrading the motor controller firmware, the `airbot_play` package should be installed first. See [here](./env.md).
 
 Suppose only one AIRBOT Play arm is connected to the computer (which makes the device name `can0`), run the following command to upgrade the firmware for the first motor:
 
@@ -171,7 +171,7 @@ python -m airbot_play.iap_burn [<path_to_firmware>] -m can0 -i 3
     Make sure the power supply is attached to the AIRBOT Play when upgrading the firmware.
 
 !!! info "Install `airbot_play` first"
-    Before upgrading the motor controller firmware, the `airbot_play` package should be installed first. See [here](../sdk/sdk.md).
+    Before upgrading the motor controller firmware, the `airbot_play` package should be installed first. See [here](./env.md).
 
 The end interface board firmware can be upgraded by running the following command:
 

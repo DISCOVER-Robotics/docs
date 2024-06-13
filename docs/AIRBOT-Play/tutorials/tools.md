@@ -78,6 +78,10 @@ This tool allows you to control the AIRBOT Play arm using the keyboard.
 
     See the tutorial [here](set_zero.md) for detailed operations.
 
+!!! warning "Firmware Version"
+    All controlling methods require compatible firmware versions. Please make sure firmwares of all boards (base interface boards, motor boards, and end interface boards) are updated to the firmwares provided in the corresponding software package.
+
+    The firmware version of the boards can be checked using the [`airbot_read_params`](#airbot_read_params) tool.
 
 ### CLI options
 
@@ -225,6 +229,11 @@ This tool allows you to performing tele-operation of two AIRBOT Play arms by syn
     * The program breaks down during another operation, and the robot is powered off and on again
 
     See the tutorial [here](set_zero.md) for detailed operations.
+
+!!! warning "Firmware Version"
+    All controlling methods require compatible firmware versions. Please make sure firmwares of all boards (base interface boards, motor boards, and end interface boards) are updated to the firmwares provided in the corresponding software package.
+
+    The firmware version of the boards can be checked using the [`airbot_read_params`](#airbot_read_params) tool.
 
 ### CLI options
 

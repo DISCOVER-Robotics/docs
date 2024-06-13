@@ -50,7 +50,7 @@ plugins:
       exclude_h1: true
   - redirects:
       redirect_maps:
-        'index.md': 'AIRBOT-Play/productManual/introduction.md'
+        'index.md': 'AIRBOT-Play/manual/spec.md'
 
 extra:
   version:
