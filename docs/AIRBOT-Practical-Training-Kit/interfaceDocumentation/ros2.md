@@ -1,1 +1,0 @@
-AIRBOT-Practical-Training-Kit-ros2

@@ -1,0 +1,811 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="http://127.0.0.1:8000/docs/latest/sdk/aloha/" rel="canonical"/>
+<link href="../ROS1/" rel="prev"/>
+<link href="../../upgrade/airbot-play/" rel="next"/>
+<link href="../../assets/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-9.5.21" name="generator"/>
+<title>ALOHA - AIRBOT 产品文档</title>
+<link href="../../assets/stylesheets/main.66ac8b77.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CSpace+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Lato";--md-code-font:"Space Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="cyan" data-md-color-primary="black" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#airbot-play-aloha">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+<aside class="md-banner md-banner--warning">
+<div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../..">
+<strong>Click here to go to latest.</strong>
+</a>
+</div>
+<script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+</aside>
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="AIRBOT 产品文档" class="md-header__button md-logo" data-md-component="logo" href="https://airbots.online" title="AIRBOT 产品文档">
+<img alt="logo" src="../../assets/logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            AIRBOT 产品文档
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              ALOHA
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="black" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../manual/airbot-play/">
+          
+  
+  Product Manual
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../">
+          
+  
+  Software SDK
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="./">
+          
+  
+  Applications
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../upgrade/airbot-play/">
+          
+  
+  Firmware Upgrade Guide
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="AIRBOT 产品文档" class="md-nav__button md-logo" data-md-component="logo" href="https://airbots.online" title="AIRBOT 产品文档">
+<img alt="logo" src="../../assets/logo.png"/>
+</a>
+    AIRBOT 产品文档
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Product Manual
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            Product Manual
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../manual/airbot-play/">
+<span class="md-ellipsis">
+    AIRBOT Play
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../manual/airbot-play-pro/">
+<span class="md-ellipsis">
+    AIRBOT Play Pro
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Software SDK
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Software SDK
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    SDK for AIRBOT Play (Pro)
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cpp/annotated.html">
+<span class="md-ellipsis">
+    C++ Interface
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ROS1/">
+<span class="md-ellipsis">
+    ROS1 Interface
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs/python/">
+<span class="md-ellipsis">
+    Python Interface
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<span class="md-ellipsis">
+    Applications
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Applications
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    ALOHA
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    ALOHA
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+<span class="md-ellipsis">
+      Introduction
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#environment-setup">
+<span class="md-ellipsis">
+      Environment Setup
+    </span>
+</a>
+<nav aria-label="Environment Setup" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-collection-and-convertion-environment">
+<span class="md-ellipsis">
+      Data Collection and Convertion Environment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-replay-environment">
+<span class="md-ellipsis">
+      Data Replay Environment
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-collection">
+<span class="md-ellipsis">
+      Data Collection
+    </span>
+</a>
+<nav aria-label="Data Collection" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#starting-robotic-arms">
+<span class="md-ellipsis">
+      Starting Robotic Arms
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#connecting-cameras">
+<span class="md-ellipsis">
+      Connecting Cameras
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#starting-data-collection">
+<span class="md-ellipsis">
+      Starting Data Collection
+    </span>
+</a>
+<nav aria-label="Starting Data Collection" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explanation-of-parameters">
+<span class="md-ellipsis">
+      Explanation of Parameters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#excution-example">
+<span class="md-ellipsis">
+      Excution Example
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-descriptions">
+<span class="md-ellipsis">
+      Key Descriptions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operational-steps">
+<span class="md-ellipsis">
+      Operational Steps
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-convertion">
+<span class="md-ellipsis">
+      Data Convertion
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-replay-optional">
+<span class="md-ellipsis">
+      Data Replay (Optional)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Firmware Upgrade Guide
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Firmware Upgrade Guide
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../upgrade/airbot-play/">
+<span class="md-ellipsis">
+    AIRBOT Play
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+<span class="md-ellipsis">
+      Introduction
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#environment-setup">
+<span class="md-ellipsis">
+      Environment Setup
+    </span>
+</a>
+<nav aria-label="Environment Setup" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-collection-and-convertion-environment">
+<span class="md-ellipsis">
+      Data Collection and Convertion Environment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-replay-environment">
+<span class="md-ellipsis">
+      Data Replay Environment
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-collection">
+<span class="md-ellipsis">
+      Data Collection
+    </span>
+</a>
+<nav aria-label="Data Collection" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#starting-robotic-arms">
+<span class="md-ellipsis">
+      Starting Robotic Arms
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#connecting-cameras">
+<span class="md-ellipsis">
+      Connecting Cameras
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#starting-data-collection">
+<span class="md-ellipsis">
+      Starting Data Collection
+    </span>
+</a>
+<nav aria-label="Starting Data Collection" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explanation-of-parameters">
+<span class="md-ellipsis">
+      Explanation of Parameters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#excution-example">
+<span class="md-ellipsis">
+      Excution Example
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-descriptions">
+<span class="md-ellipsis">
+      Key Descriptions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operational-steps">
+<span class="md-ellipsis">
+      Operational Steps
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-convertion">
+<span class="md-ellipsis">
+      Data Convertion
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-replay-optional">
+<span class="md-ellipsis">
+      Data Replay (Optional)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="airbot-play-aloha"><span class="enumerate-headings-plugin enumerate-heading-plugin"></span> AIRBOT Play × ALOHA</h1>
+<h2 id="introduction"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Introduction</h2>
+<p>This tutorial is about demonstration (single or double arm manipulation) for raw data collecting, data converting (convert raw data to hdf5 file used by the learning algorithms) and data replaying.</p>
+<p>Please ask the customer service for all available dependency packages and source codes files. We will gradually provide relevant download links in the future.</p>
+<blockquote>
+<p><strong>Docker Notation</strong></p>
+<p>If you want to install and use these packages in Docker, you should run your container with some necessary args, for example:</p>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--name<span class="w"> </span>airbot_play<span class="w"> </span>--network<span class="o">=</span>host<span class="w"> </span>--privileged<span class="o">=</span><span class="nb">true</span><span class="w"> </span>-v<span class="w"> </span>/lib/modules:/lib/modules,/tmp/.X11-unix:/tmp/.X11-unix<span class="w"> </span>-e<span class="w"> </span><span class="nv">DISPLAY</span><span class="o">=</span><span class="nv">$DISPLAY</span><span class="w"> </span>ubuntu:20.04
+</span></code></pre></div>
+And you probably can not install the deb packages when they are in <code>/root</code>. In this case, you can move the packages and the terminal to <code>/tmp</code> first:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>mv<span class="w"> </span>airbot_*.deb<span class="w"> </span>/tmp/<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/tmp
+</span></code></pre></div>
+<p>In some Docker Containers, there is no <code>sudo</code> command, you can just remove it from the commands below.</p>
+</blockquote>
+<h2 id="environment-setup"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.</span> Environment Setup</h2>
+<div class="admonition tip">
+<p class="admonition-title">Supported Operation Systems</p>
+<ul>
+<li>Ubuntu 20.04 LTS AMD64(x86_64)</li>
+<li>Ubuntu 20.04 LTS ARM64</li>
+</ul>
+</div>
+<h3 id="data-collection-and-convertion-environment"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.1</span> Data Collection and Convertion Environment</h3>
+<p>The core control package for data collection should be in the format of <code>airbot_play_&lt;version&gt;_&lt;arch&gt;.deb</code>. Install this package with the following command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-pip<span class="w"> </span>python3<span class="w"> </span>udev<span class="w"> </span>kmod<span class="w"> </span>iproute2<span class="w"> </span>libcanberra-gtk-module<span class="w"> </span>libcanberra-gtk3-module<span class="w"> </span>-y
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>sudo<span class="w"> </span>service<span class="w"> </span>udev<span class="w"> </span>restart<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>udevadm<span class="w"> </span>control<span class="w"> </span>--reload
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>./airbot_play_*.deb<span class="w"> </span>-y
+</span></code></pre></div>
+<p>The functional package for data collection should be in the format of <code>airbot_aloha_&lt;version&gt;_&lt;arch&gt;.deb</code>. Install this package with the following command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>./airbot_aloha_*.deb
+</span></code></pre></div>
+<h3 id="data-replay-environment"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.2</span> Data Replay Environment</h3>
+<blockquote>
+<ul>
+<li>
+<p><a href="#data-collection-and-convertion-environment">Data Collection and Convertion Environment</a> needs to be configured first.</p>
+</li>
+<li>
+<p>This configuration will install the AIRBOT Play Python API.</p>
+</li>
+</ul>
+</blockquote>
+<p>The source code file name should be in the format of <code>airbot_play_python_&lt;version&gt;.zip</code>. Run the following command to extract and build the project:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>librosconsole-dev<span class="w"> </span>liburdf-dev<span class="w"> </span>libspdlog-dev<span class="w"> </span>libfmt-dev<span class="w"> </span>git<span class="w"> </span>-y
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>cp<span class="w"> </span>airbot_play_python_2.7.zip<span class="w"> </span>airbot_play_python.zip
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>unzip<span class="w"> </span>airbot_play_python.zip<span class="w"> </span>-q<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>airbot_play_python.zip
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="nb">cd</span><span class="w"> </span>airbot_play_python/python
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w"> </span>https://github.com/pybind/pybind11.git
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>cmake<span class="w"> </span>..<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>-j32<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>..
+</span></code></pre></div>
+<blockquote>
+<p>Note: If you manually download the pybind11 project, then you should extract and rename the folder to <code>pybind11</code> and replace the empty pybind11 folder in <code>airbot_play_python/python</code>.</p>
+</blockquote>
+<p>Finally, install the airbot python package via pip:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>pip<span class="w"> </span>install<span class="w"> </span>.<span class="w"> </span>-i<span class="w"> </span>https://pypi.mirrors.ustc.edu.cn/simple/
+</span></code></pre></div>
+<h2 id="data-collection"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.</span> Data Collection</h2>
+<blockquote>
+<ul>
+<li>
+<p><a href="#data-collection-and-convertion-environment">Data Collection and Convertion Environment</a> needs to be configured first.</p>
+</li>
+<li>
+<p>The task name should be reasonable, and it is recommended to include time in the name to distinguish the same task data collected at different times.</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="starting-robotic-arms"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.1</span> Starting Robotic Arms</h3>
+<ol>
+<li>Prepare all teaching arms and execution robotic arms.</li>
+<li>Connect the power sources of all robotic arms (order doesn't matter).</li>
+<li><strong>First</strong>, connect the teaching arm via Type-C data cable (corresponding to CAN0), <strong>then</strong> connect the execution arm, too (corresponding to CAN1). For dual-arm operations, follow the above sequence for the left-side robotic arm first, then the right-side arm.</li>
+<li>Long-press the power button on each robotic arm to turn them on.</li>
+<li>Ensure that the robotic arms are at the zero pose; otherwise, perform a <a href="https://discover-robotics.github.io/docs/manual/#_11">zero calibration</a>.</li>
+</ol>
+<blockquote>
+<p>Note: Other devices connected to your computer may occupy the CAN interfaces, you may need to change the dufault can interfaces manually. Please refer to <a href="#explanation-of-parameters">Explanation of Parameters</a>.</p>
+</blockquote>
+<h3 id="connecting-cameras"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.2</span> Connecting Cameras</h3>
+<p>Data collection typically requires multiple cameras, and the connection order can be as follows:</p>
+<ul>
+<li>Single-arm task sequence: Arm-mounted camera left eye -&gt; Arm-mounted camera right eye -&gt; Base-mounted camera</li>
+<li>Dual-arm task: Left arm camera -&gt; Right arm camera -&gt; Environment camera top -&gt; Environment camera bottom</li>
+</ul>
+<p>The above sequence is just a reference: the actual connection order depends on the number of cameras and their placement. Generally, prioritize connecting arm-mounted, left-side, and overhead cameras first.</p>
+<h3 id="starting-data-collection"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.3</span> Starting Data Collection</h3>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>airbot_demonstrate<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span>-c<span class="w"> </span>&lt;cam_device_0&gt;<span class="w"> </span>-c<span class="w"> </span>&lt;cam_device_1&gt;<span class="w"> </span>-c<span class="w"> </span>&lt;cam_device_2&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span>-mts<span class="w"> </span>&lt;max_time_step&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span>-tn<span class="w"> </span>&lt;task_name&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span>-se<span class="w"> </span>&lt;start_episode_index&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-6"><a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span>-f<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-7"><a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span>-sjp<span class="w"> </span>&lt;joint_pos_1&gt;<span class="w"> </span>&lt;joint_pos_2&gt;<span class="w"> </span>&lt;joint_pos_3&gt;<span class="w"> </span>&lt;joint_pos_4&gt;<span class="w"> </span>&lt;joint_pos_5&gt;<span class="w"> </span>&lt;joint_pos_6&gt;<span class="w"> </span>&lt;gripper_pos&gt;
+</span></code></pre></div>
+For dual-arm tasks, replace the command <code>airbot_demonstrate</code> with <code>airbot_demonstrate_dual</code> and change -sjp to -sjpl and -sjpr to specify the initial joint positions of left arm and right arm respectively (both defualt to 0 if not used).</p>
+<h4 id="explanation-of-parameters"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.3.1</span> Explanation of Parameters</h4>
+<ul>
+<li><code>-c</code>: Device number of the USB cameras, the order of multiple device numbers (i.e., camera sequence) is specified by the specific task.<ul>
+<li>Typically, follow the connection order, where available camera device numbers are incremented by even numbers, such as 0, 2, 4...</li>
+<li>If your computer has a built-in regular camera, it occupies one device number, and externally connected camera device numbers start from 2 and increment by even numbers: 2, 4, 6... (if cameras were connected before the computer started, the device number of the built-in camera may not be 0; in rare cases, after connecting cameras post-startup, the built-in camera's device number may not be 0).</li>
+<li>If your computer has a built-in depth/structured light camera (like Windows Hello camera), the RGB camera and depth camera each occupy a device number, and externally connected camera device numbers start from 4 and increment by even numbers: 4, 6, 8...</li>
+</ul>
+</li>
+<li><code>-mts</code>: Specifies the maximum number of frames to be captured; specified by the specific task.
+When reaching the maximum time steps, the program will prompt.</li>
+<li><code>-tn</code>: Task name, specified by the specific task.<ul>
+<li>The collected data will be saved in the <code>demonstrations/(raw/)&lt;task_name&gt;</code> folder in the current directory.</li>
+</ul>
+</li>
+<li><code>-se</code>: Starting episode number for collection, default is 0.<ul>
+<li>After interruption, you can modify this value to continue collection without overwriting previous data.</li>
+<li>When data is mistakenly saved, specifying this episode number allows for re-collection to overwrite existing data.</li>
+<li>When collecting data multiple times after executing the command, the episode numbers of subsequent collections will increment from this base.</li>
+<li>Each set of data is saved in the <code>demonstrations/(raw/)&lt;task_name&gt;/&lt;episode_id&gt;</code> folder.</li>
+</ul>
+</li>
+<li><code>-sjp</code>: Initial positions of each joint and gripper before starting collection for each episode; defaults to 0 if not used. Specify values based on the actual situation of the specific task.</li>
+<li><code>-f</code>: Data collection frequency, default is 15Hz.</li>
+</ul>
+<p>And there are some other parameters for flexible usage:</p>
+<ul>
+<li><code>-m</code>: the can interface of of the teacher arm, default to can0.</li>
+<li><code>-n</code>: the can interface of of the follower arm, default to can1.</li>
+</ul>
+<h4 id="excution-example"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.3.2</span> Excution Example</h4>
+<ul>
+<li>One teacher with one follower:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>airbot_demonstrate<span class="w"> </span>-c<span class="w"> </span><span class="m">0</span><span class="w"> </span>-mts<span class="w"> </span><span class="m">100</span><span class="w"> </span>-tn<span class="w"> </span>test_task<span class="w"> </span>-sjp<span class="w"> </span><span class="m">0</span>.0<span class="w"> </span><span class="m">0</span>.0<span class="w"> </span><span class="m">0</span>.0<span class="w"> </span><span class="m">0</span>.0<span class="w"> </span><span class="m">0</span>.0<span class="w"> </span><span class="m">0</span>.0<span class="w"> </span><span class="m">0</span>.0
+</span></code></pre></div></li>
+<li>Two teachers with two followers:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>airbot_demonstrate_dual<span class="w"> </span>-c<span class="w"> </span><span class="m">0</span><span class="w"> </span>-mts<span class="w"> </span><span class="m">100</span><span class="w"> </span>-tn<span class="w"> </span>test_task<span class="w"> </span>-sjpl<span class="w"> </span><span class="m">0</span>.0<span class="w"> </span><span class="m">0</span>.0<span class="w"> </span><span class="m">0</span>.0<span class="w"> </span><span class="m">0</span>.0<span class="w"> </span><span class="m">0</span>.0<span class="w"> </span><span class="m">0</span>.0<span class="w"> </span><span class="m">0</span>.0<span class="w"> </span>-sjpr<span class="w"> </span><span class="m">0</span>.0<span class="w"> </span><span class="m">0</span>.0<span class="w"> </span><span class="m">0</span>.0<span class="w"> </span><span class="m">0</span>.0<span class="w"> </span><span class="m">0</span>.0<span class="w"> </span><span class="m">0</span>.0<span class="w"> </span><span class="m">0</span>.0
+</span></code></pre></div></li>
+</ul>
+<h4 id="key-descriptions"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.3.3</span> Key Descriptions</h4>
+<blockquote>
+<p>Do not press or hold keys continuously; otherwise, the key's behavior will repeat sequentially.</p>
+</blockquote>
+<p>After excuting the command above, the terminal will be cleaned and you can use keyboard to control. The key descriptions are as follows:</p>
+<ul>
+<li><code>g</code>: Toggle gravity compensation on/off.</li>
+<li><code>Spacebar</code>: Start/stop episode data recording.</li>
+<li><code>q</code>: Discard the current record.</li>
+<li><code>0</code>: Return the robotic arm to the initial position.</li>
+<li><code>p</code>: Print current robotic arm states information. If the information is not displayed properly, increase your terminal width.</li>
+</ul>
+<h4 id="operational-steps"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.3.4</span> Operational Steps</h4>
+<ol>
+<li>Start the program, and the real-time windows of each camera will appear (if not all cameras start, try adjusting device numbers or checking camera connections; try connecting only one camera per docking station; some computers may support only 1-2 external cameras when USB ports share the same bus, consider changing the computer).</li>
+<li>Press <code>Spacebar</code> to start recording data and simultaneously, teleoperate the robotic arm to complete the task.</li>
+<li>After completing the task, wait to collect the specified number of frames (the number of frames used to complete the task should be as close as possible to the maximum collection frames):<ul>
+<li>If the teaching opration is not acceptable, press <code>q</code> to discard the current teaching record, then press <code>0</code> to control the robotic arm to return to the initial position.</li>
+<li>If it is acceptable, press <code>Spacebar</code> to save the current teaching record. After saving, the robotic arm will automatically return to the initial position.</li>
+</ul>
+</li>
+<li>(Optional) In the <code>demonstrations/(raw/)&lt;task_name&gt;</code> folder in the current directory, check the recorded episodes.<ul>
+<li>Each collected episode data includes: videos recorded by cameras (.avi), and a robotic arm status record file (.json).</li>
+</ul>
+</li>
+</ol>
+<p><strong>Additional Notes:</strong></p>
+<ol>
+<li>
+<p>Try to ensure that the completed task actions are completed <strong>just before reaching the maximum frame count</strong>, i.e., do not end the action too early.</p>
+</li>
+<li>
+<p>The robotic arm movement speed should not be too fast; otherwise, the collected information will be sparse, and the image quality will not be high.</p>
+</li>
+<li>
+<p>It is recommended to store the collected task data folder <task_name> in the same directory structure on a <strong>portable hard drive</strong> as a backup.</task_name></p>
+</li>
+</ol>
+<h2 id="data-convertion"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.</span> Data Convertion</h2>
+<blockquote>
+<p><a href="#data-collection-and-convertion-environment">Data Collection and Convertion Environment</a> needs to be configured first.</p>
+</blockquote>
+<p>In the same path where the data collection command was executed, run the following command to save the data in hdf5 format:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>/usr/bin/python3<span class="w"> </span>-m<span class="w"> </span>airbot_aloha.convert_episodes<span class="w"> </span>-rn<span class="w"> </span><span class="m">1</span><span class="w"> </span>-cn<span class="w"> </span><span class="m">0</span><span class="w"> </span>-tn<span class="w"> </span>test_task<span class="w"> </span>-se<span class="w"> </span><span class="m">0</span><span class="w"> </span>-ee<span class="w"> </span><span class="m">0</span><span class="w"> </span>-rd<span class="w"> </span>./demonstrations
+</span></code></pre></div>
+<p><strong>Parameter explanation:</strong></p>
+<ul>
+<li><code>-cn</code>: Specify camera names. For example, if there are 2 cameras, then specify <code>-cn 0,1</code>.</li>
+<li><code>-tn</code>: Specify the task name, same as specified during data collection.</li>
+<li><code>-se</code>: Specify the starting episode number of the data.</li>
+<li><code>-ee</code>: Specify the ending episode number of the data.</li>
+<li><code>-rn</code>: For dual-arm tasks, specify <code>-rn</code> 2.</li>
+<li><code>-rd</code>: Path to your data directory.</li>
+</ul>
+<p>This command will search for the specified task data in the <code>demonstrations(/raw)</code> folder in the current directory and convert them to hdf5 files into the <code>demonstrations/hdf5</code> folder.</p>
+<p>Similarly, it is recommended to store the converted task data folder <code>&lt;task_name&gt;</code> in the same directory structure on a portable hard drive as a backup.</p>
+<h2 id="data-replay-optional"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.</span> Data Replay (Optional)</h2>
+<blockquote>
+<p>Data replay can be used to verify if there are issues with collected data, init states of the environment, etc. (requires prior setup of the <a href="#data-replay-environment">Data Replay Environment</a>).</p>
+</blockquote>
+<p>The data replay command and its parameters are as follows:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>/usr/bin/python3<span class="w"> </span>-m<span class="w"> </span>airbot_aloha.replay_episodes<span class="w"> </span>-rn<span class="w"> </span><span class="m">1</span><span class="w"> </span>-tn<span class="w"> </span>test_task<span class="w"> </span>-ei<span class="w"> </span><span class="m">0</span><span class="w"> </span>-ii<span class="w"> </span>-can<span class="w"> </span><span class="m">1</span><span class="w"> </span>-cn<span class="w"> </span><span class="m">0</span>
+</span></code></pre></div>
+<p><strong>Parameter explanation:</strong></p>
+<ul>
+<li><code>-tn</code>: Specify the task name.</li>
+<li><code>-ei</code>: Specify the ID corresponding to the HDF file.</li>
+<li><code>-can</code>: CAN ID of the follower arms. For dual-arm tasks, you can set <code>-can 1 3</code> if you followed the connection order in <a href="#starting-robotic-arms">Starting-Robotic-Arms</a>. Also, you can unplug all the Type-C wires first and only connect the follower arms, then set <code>-can 0 1</code>.</li>
+<li><code>-ii</code>: Do not replay camera data.</li>
+<li><code>-ia</code>: Do not replay action data.</li>
+<li><code>-rn</code>: For dual-arm tasks, specify <code>-rn</code> 2.</li>
+<li><code>-cn</code>: The name of the cameras data to be replayed. For example, if there are 2 cameras, then specify <code>-cn 0,1</code>.</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: ROS1 Interface" class="md-footer__link md-footer__link--prev" href="../ROS1/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                ROS1 Interface
+              </div>
+</div>
+</a>
+<a aria-label="Next: AIRBOT Play" class="md-footer__link md-footer__link--next" href="../../upgrade/airbot-play/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                AIRBOT Play
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<div class="md-progress" data-md-component="progress" role="progressbar"></div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "default": "latest", "provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.a7c05c9e.min.js"></script>
+</body>
+</html>
