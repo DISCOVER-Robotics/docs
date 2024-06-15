@@ -6,7 +6,7 @@ After obtaining the [SDK package](#firmware-package), the upgrade of AIRBOT Play
 
 ## SDK Package
 
-Please contact [technical support](mailto:contact@discover-robotics.com) to obtain the SDK package. After extracting the SDK package, the directory structure is as follows:
+Please contact technical support: [contact@discover-robotics.com](mailto:contact@discover-robotics.com) to obtain the SDK package. After extracting the SDK package, the directory structure is as follows:
 ```shell
 # tree 2.8.3/
 .
@@ -116,13 +116,13 @@ Suppose only one AIRBOT Play arm is connected to the computer (which makes the d
 
 ```bash
 # Upgrade the firmware for the first motor of can0 device
-python -m airbot_play.iap_burn [<path_to_firmware>] -m can0 -i 1
+python3 -m airbot_play.iap_burn [<path_to_firmware>] -m can0 -i 1
 ```
 
 !!! danger "Firmware Selection"
     Please select the correct firmware for the end effector connected to the AIRBOT Play. The firmware for the motor controller is `BLDC_4_ChibiOS.bin` in the `firmwares` directory of the SDK package.
 
-    Once the wrong firmware is burned, the whole AIRBOT Play would fail to work **AT ALL**. If the wrong firmware has already been burnt, please contact [technical support](mailto:contact@discover-robotics.com) for further assistance.
+    Once the wrong firmware is burned, the whole AIRBOT Play would fail to work **AT ALL**. If the wrong firmware has already been burnt, please contact technical support: [contact@discover-robotics.com](mailto:contact@discover-robotics.com) for further assistance.
 
 Replace `<path_to_firmware>` with the path to the firmware file `BLDC_4_ChibiOS.bin` in the SDK package.
 
@@ -148,16 +148,16 @@ Then, run the following commands to upgrade the firmware for the 2nd and 3rd mot
 
 ```bash
 # Upgrade the firmware for the 2nd motor of can0 device
-python -m airbot_play.iap_burn [<path_to_firmware>] -m can0 -i 2
+python3 -m airbot_play.iap_burn [<path_to_firmware>] -m can0 -i 2
 # Upgrade the firmware for the 3rd motor of can0 device
-python -m airbot_play.iap_burn [<path_to_firmware>] -m can0 -i 3
+python3 -m airbot_play.iap_burn [<path_to_firmware>] -m can0 -i 3
 ```
 
 !!! note 
     If the end effector (AIRBOT Gripper or AIRBOT Demonstrator) is connected, the firmware of the controller can be updated by running the following command:
     
     ```
-    python -m airbot_play.iap_burn [<path_to_firmware>] -m can0 -i 7
+    python3 -m airbot_play.iap_burn [<path_to_firmware>] -m can0 -i 7
     ```
 
 ## Upgrading End Interface Board
@@ -165,7 +165,7 @@ python -m airbot_play.iap_burn [<path_to_firmware>] -m can0 -i 3
 !!! danger "Firmware Selection"
     Please select the correct firmware for the end effector connected to the AIRBOT Play. The firmware files are located in the `end` directory of the SDK package.
 
-    Once the wrong firmware is burned, the whole AIRBOT Play would fail to work **AT ALL**. If the wrong firmware has already been burnt, please contact [technical support](mailto:contact@discover-robotics.com) for further assistance.
+    Once the wrong firmware is burned, the whole AIRBOT Play would fail to work **AT ALL**. If the wrong firmware has already been burnt, please contact technical support: [contact@discover-robotics.com](mailto:contact@discover-robotics.com) for further assistance.
 
 !!! warning "Power Supply"
     Make sure the power supply is attached to the AIRBOT Play when upgrading the firmware.
@@ -177,7 +177,7 @@ The end interface board firmware can be upgraded by running the following comman
 
 ```bash
 # Upgrade the firmware for the end interface board of can0 device
-python -m airbot_play.iap_burn [<path_to_firmware>] -m can0 -i 8
+python3 -m airbot_play.iap_burn [<path_to_firmware>] -m can0 -i 8
 ```
 
 Replace `<path_to_firmware>` with the path to the firmware file `arm-interface-board-end_*.bin` in the SDK package. Any one of the four end interface board firmware can be selected.

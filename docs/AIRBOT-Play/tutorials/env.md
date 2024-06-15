@@ -2,7 +2,7 @@
 
 In this tutorial, we will demonstrate how to set up the software environment for AIRBOT Play.
 
-Before proceeding, please make sure you have obtained the SDK package. If not, please contact [technical support](mailto:contact@discover-robotics.com) for further assistance. After extracting the SDK package, the directory structure is as follows:
+Before proceeding, please make sure you have obtained the SDK package. If not, please contact technical support: [contact@discover-robotics.com](mailto:contact@discover-robotics.com) for further assistance. After extracting the SDK package, the directory structure is as follows:
 ```shell
 # tree 2.8.3/
 .
@@ -25,7 +25,7 @@ Before proceeding, please make sure you have obtained the SDK package. If not, p
 ```
 
 !!! question "Support for arm64(aarch64)"
-	The standard SDK package includes packages for x86_64(amd64) architecture only. If you are using an ARM-based system, please contact [technical support](mailto:contact@discover-robotics.com) for further assistance.
+	The standard SDK package includes packages for x86_64(amd64) architecture only. If you are using an ARM-based system, please contact technical support: [contact@discover-robotics.com](mailto:contact@discover-robotics.com) for further assistance.
 
 !!! tip "TL;DR: I want to install all packages at once!"
 	To install all available packages, run the following commands:
