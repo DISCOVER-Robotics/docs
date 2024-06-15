@@ -2,72 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/manual/end_effectors/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/manual/faq/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/manual/installation/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/manual/introduction/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/manual/package_contents/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/manual/spec/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/sdk/ros1/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/sdk/ros2/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/tutorials/aloha/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/tutorials/env/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/tutorials/set_zero/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/tutorials/states/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/tutorials/tools/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/docs/latest/AIRBOT-Play/tutorials/upgrade/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

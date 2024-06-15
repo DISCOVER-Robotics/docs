@@ -435,7 +435,7 @@
 <p>In this tutorial, we will show the detailed operations for upgrading the firmware of AIRBOT Play.</p>
 <p>After obtaining the <a href="#firmware-package">SDK package</a>, the upgrade of AIRBOT Play firmware consists of upgrading <a href="#upgrading-base-interface-board">base interface board</a>, <a href="#upgrading-motor-controller-firmware">motor controller firmware</a> and <a href="#upgrading-end-interface-board">end interface board firmware</a>.</p>
 <h2 id="sdk-package"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> SDK Package</h2>
-<p>Please contact <a href="mailto:contact@discover-robotics.com">technical support</a> to obtain the SDK package. After extracting the SDK package, the directory structure is as follows:
+<p>Please contact technical support: <a href="mailto:contact@discover-robotics.com">contact@discover-robotics.com</a> to obtain the SDK package. After extracting the SDK package, the directory structure is as follows:
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># tree 2.8.3/</span>
 </span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>.
 </span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>├──<span class="w"> </span>CHANGELOG
@@ -544,12 +544,12 @@ Then, check <code>I have read and understood the ST Terms of Use</code> and keep
 </div>
 <p>Suppose only one AIRBOT Play arm is connected to the computer (which makes the device name <code>can0</code>), run the following command to upgrade the firmware for the first motor:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># Upgrade the firmware for the first motor of can0 device</span>
-</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>python<span class="w"> </span>-m<span class="w"> </span>airbot_play.iap_burn<span class="w"> </span><span class="o">[</span>&lt;path_to_firmware&gt;<span class="o">]</span><span class="w"> </span>-m<span class="w"> </span>can0<span class="w"> </span>-i<span class="w"> </span><span class="m">1</span>
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>airbot_play.iap_burn<span class="w"> </span><span class="o">[</span>&lt;path_to_firmware&gt;<span class="o">]</span><span class="w"> </span>-m<span class="w"> </span>can0<span class="w"> </span>-i<span class="w"> </span><span class="m">1</span>
 </span></code></pre></div>
 <div class="admonition danger">
 <p class="admonition-title">Firmware Selection</p>
 <p>Please select the correct firmware for the end effector connected to the AIRBOT Play. The firmware for the motor controller is <code>BLDC_4_ChibiOS.bin</code> in the <code>firmwares</code> directory of the SDK package.</p>
-<p>Once the wrong firmware is burned, the whole AIRBOT Play would fail to work <strong>AT ALL</strong>. If the wrong firmware has already been burnt, please contact <a href="mailto:contact@discover-robotics.com">technical support</a> for further assistance.</p>
+<p>Once the wrong firmware is burned, the whole AIRBOT Play would fail to work <strong>AT ALL</strong>. If the wrong firmware has already been burnt, please contact technical support: <a href="mailto:contact@discover-robotics.com">contact@discover-robotics.com</a> for further assistance.</p>
 </div>
 <p>Replace <code>&lt;path_to_firmware&gt;</code> with the path to the firmware file <code>BLDC_4_ChibiOS.bin</code> in the SDK package.</p>
 <div class="admonition tip">
@@ -571,21 +571,21 @@ Then, check <code>I have read and understood the ST Terms of Use</code> and keep
 <p>The version of the firmware will be displayed in the output. If the version is updated to the latest version, the upgrade is successful.</p>
 <p>Then, run the following commands to upgrade the firmware for the 2nd and 3rd motor:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1"># Upgrade the firmware for the 2nd motor of can0 device</span>
-</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>python<span class="w"> </span>-m<span class="w"> </span>airbot_play.iap_burn<span class="w"> </span><span class="o">[</span>&lt;path_to_firmware&gt;<span class="o">]</span><span class="w"> </span>-m<span class="w"> </span>can0<span class="w"> </span>-i<span class="w"> </span><span class="m">2</span>
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>airbot_play.iap_burn<span class="w"> </span><span class="o">[</span>&lt;path_to_firmware&gt;<span class="o">]</span><span class="w"> </span>-m<span class="w"> </span>can0<span class="w"> </span>-i<span class="w"> </span><span class="m">2</span>
 </span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="c1"># Upgrade the firmware for the 3rd motor of can0 device</span>
-</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>python<span class="w"> </span>-m<span class="w"> </span>airbot_play.iap_burn<span class="w"> </span><span class="o">[</span>&lt;path_to_firmware&gt;<span class="o">]</span><span class="w"> </span>-m<span class="w"> </span>can0<span class="w"> </span>-i<span class="w"> </span><span class="m">3</span>
+</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>python3<span class="w"> </span>-m<span class="w"> </span>airbot_play.iap_burn<span class="w"> </span><span class="o">[</span>&lt;path_to_firmware&gt;<span class="o">]</span><span class="w"> </span>-m<span class="w"> </span>can0<span class="w"> </span>-i<span class="w"> </span><span class="m">3</span>
 </span></code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If the end effector (AIRBOT Gripper or AIRBOT Demonstrator) is connected, the firmware of the controller can be updated by running the following command:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>python -m airbot_play.iap_burn [&lt;path_to_firmware&gt;] -m can0 -i 7
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>python3 -m airbot_play.iap_burn [&lt;path_to_firmware&gt;] -m can0 -i 7
 </span></code></pre></div>
 </div>
 <h2 id="upgrading-end-interface-board"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.</span> Upgrading End Interface Board</h2>
 <div class="admonition danger">
 <p class="admonition-title">Firmware Selection</p>
 <p>Please select the correct firmware for the end effector connected to the AIRBOT Play. The firmware files are located in the <code>end</code> directory of the SDK package.</p>
-<p>Once the wrong firmware is burned, the whole AIRBOT Play would fail to work <strong>AT ALL</strong>. If the wrong firmware has already been burnt, please contact <a href="mailto:contact@discover-robotics.com">technical support</a> for further assistance.</p>
+<p>Once the wrong firmware is burned, the whole AIRBOT Play would fail to work <strong>AT ALL</strong>. If the wrong firmware has already been burnt, please contact technical support: <a href="mailto:contact@discover-robotics.com">contact@discover-robotics.com</a> for further assistance.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Power Supply</p>
@@ -597,7 +597,7 @@ Then, check <code>I have read and understood the ST Terms of Use</code> and keep
 </div>
 <p>The end interface board firmware can be upgraded by running the following command:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># Upgrade the firmware for the end interface board of can0 device</span>
-</span><span id="__span-8-2"><a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>python<span class="w"> </span>-m<span class="w"> </span>airbot_play.iap_burn<span class="w"> </span><span class="o">[</span>&lt;path_to_firmware&gt;<span class="o">]</span><span class="w"> </span>-m<span class="w"> </span>can0<span class="w"> </span>-i<span class="w"> </span><span class="m">8</span>
+</span><span id="__span-8-2"><a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>airbot_play.iap_burn<span class="w"> </span><span class="o">[</span>&lt;path_to_firmware&gt;<span class="o">]</span><span class="w"> </span>-m<span class="w"> </span>can0<span class="w"> </span>-i<span class="w"> </span><span class="m">8</span>
 </span></code></pre></div>
 <p>Replace <code>&lt;path_to_firmware&gt;</code> with the path to the firmware file <code>arm-interface-board-end_*.bin</code> in the SDK package. Any one of the four end interface board firmware can be selected.</p>
 </article>
